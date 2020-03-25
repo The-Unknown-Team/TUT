@@ -17,6 +17,17 @@ sourceCompatibility = targetCompatibility = '1.8'
 compileJava {
     sourceCompatibility = targetCompatibility = '1.8'
 }
+}
+dependencies {
+    provided files("lib/HyperCore-1.6.jar")
+    compile files("lib/HyperCore-1.6.jar")
+    provided files("lib/RedstoneFlux-1.12-2.1.0.6-universal.jar")
+    compile files("lib/RedstoneFlux-1.12-2.1.0.6-universal.jar")
+    provided files("run/mods/modelloader-1.1.7.jar")
+    compile files("run/mods/modelloader-1.1.4.jar")
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.50"
+    
+}
 
 minecraft {
     version = '1.12.2-14.23.5.2768'
