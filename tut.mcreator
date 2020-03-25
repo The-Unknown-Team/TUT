@@ -500,6 +500,17 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "ClientProxy",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "metadata": {
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [],
@@ -508,8 +519,8 @@
     "en_us": {
       "tile.uraninitecable.name": "Uraninite Cable",
       "tile.deadgrass.name": "Dead Grass",
-      "item.etchedpcb.name": "Etched PCB",
       "tile.oildrilltest.name": "Oildrilltest",
+      "item.etchedpcb.name": "Etched PCB",
       "item.goldwire.name": "Gold Wire",
       "fluid.oil": "Oil",
       "tile.solderingtable.name": "Soldering Table",
