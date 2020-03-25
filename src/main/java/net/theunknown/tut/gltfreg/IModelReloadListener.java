@@ -1,4 +1,4 @@
-package net.mcreator.tut.gltfreg;
+package net.theunknown.tut.gltfreg;
 
 public interface IModelReloadListener {
 

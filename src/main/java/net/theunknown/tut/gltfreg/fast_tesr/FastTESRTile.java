@@ -1,4 +1,4 @@
-package net.mcreator.tut.gltfreg.fast_tesr;
+package net.theunknown.tut.gltfreg.fast_tesr;
 
 import net.minecraft.tileentity.TileEntity;
 

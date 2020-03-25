@@ -1,4 +1,7 @@
-package net.mcreator.tut.gltfreg.fast_tesr;
+package net.theunknown.tut.gltfreg.fast_tesr;
+
+import net.theunknown.tut.gltfreg.IModelReloadListener;
+import net.theunknown.tut.TUT;
 
 import net.minecraftforge.client.model.animation.FastTESR;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -12,19 +15,14 @@ import net.minecraft.client.renderer.BlockRendererDispatcher;
 import net.minecraft.client.Minecraft;
 import net.minecraft.block.state.IBlockState;
 
-import net.mcreator.tut.tut;
-import net.mcreator.tut.gltfreg.IModelReloadListener;
-
 import com.cout970.modelloader.api.ModelLoaderApi;
 import com.cout970.modelloader.api.ModelEntry;
 
 public class FastTESRRenderer extends FastTESR<FastTESRTile> implements IModelReloadListener {
 	public static final FastTESRRenderer INSTANCE = new FastTESRRenderer();
-
 	private FastTESRRenderer() {
 	}
 	private IBakedModel model;
-
 	@Override
 	public void renderTileEntityFast(FastTESRTile te, double x, double y, double z, float partialTicks, int destroyStage, float partial,
 			BufferBuilder renderer) {
@@ -38,7 +36,7 @@ public class FastTESRRenderer extends FastTESR<FastTESRTile> implements IModelRe
 
 	@Override
 	public void reloadModels() {
-		ModelResourceLocation modelId = new ModelResourceLocation(tut.MODID + ":fast_tesr_block", "normal");
+		ModelResourceLocation modelId = new ModelResourceLocation(TUT.MODID + ":fast_tesr_block", "normal");
 		ModelEntry entry = ModelLoaderApi.INSTANCE.getModelEntry(modelId);
 		model = entry.getBaked();
 		if (model == null) {

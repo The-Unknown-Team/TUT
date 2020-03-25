@@ -1,26 +1,22 @@
-package net.mcreator.tut.gltfreg.animated_block;
+package net.theunknown.tut.gltfreg.animated_block;
+
+import net.theunknown.tut.gltfreg.IModelRegisterer;
+import net.theunknown.tut.TUT;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.client.model.ModelLoader;
 
 import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.item.Item;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.Block;
-
-import net.mcreator.tut.tut;
-import net.mcreator.tut.gltfreg.IModelRegisterer;
 
 import javax.annotation.Nullable;
 
@@ -31,7 +27,7 @@ public class AnimatedBlock extends Block implements IModelRegisterer, ITileEntit
 		super(Material.ROCK);
 		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		setUnlocalizedName("animated_block");
-		setRegistryName(tut.MODID, "animated_block");
+		setRegistryName(TUT.MODID, "animated_block");
 		GameRegistry.registerTileEntity(AnimatedTile.class, getRegistryName());
 	}
 
@@ -65,7 +61,6 @@ public class AnimatedBlock extends Block implements IModelRegisterer, ITileEntit
 		return new AnimatedTile();
 	}
 
-
 	@Override
 	public void registerModels() {
 		ResourceLocation registryName = getRegistryName();
@@ -74,7 +69,7 @@ public class AnimatedBlock extends Block implements IModelRegisterer, ITileEntit
 		}
 		ModelResourceLocation blockModel = new ModelResourceLocation(registryName, "normal");
 		ModelResourceLocation itemModel = new ModelResourceLocation(registryName, "inventory");
-		ResourceLocation modelLocation = new ResourceLocation(tut.MODID, "models/block/animated_block.gltf");
+		ResourceLocation modelLocation = new ResourceLocation(TUT.MODID, "models/block/animated_block.gltf");
 		ModelLoaderApi.INSTANCE.registerModel(blockModel, modelLocation, true);
 		ModelLoaderApi.INSTANCE.registerModel(itemModel, modelLocation, true);
 		// Register item model

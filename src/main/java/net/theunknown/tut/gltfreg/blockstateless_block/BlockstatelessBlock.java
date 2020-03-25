@@ -1,4 +1,7 @@
-package net.mcreator.tut.gltfreg.blockstateless_block;
+package net.theunknown.tut.gltfreg.blockstateless_block;
+
+import net.theunknown.tut.gltfreg.IModelRegisterer;
+import net.theunknown.tut.TUT;
 
 import net.minecraftforge.client.model.ModelLoader;
 
@@ -10,9 +13,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.Block;
 
-import net.mcreator.tut.tut;
-import net.mcreator.tut.gltfreg.IModelRegisterer;
-
 import com.cout970.modelloader.api.ModelLoaderApi;
 
 public class BlockstatelessBlock extends Block implements IModelRegisterer {
@@ -20,7 +20,7 @@ public class BlockstatelessBlock extends Block implements IModelRegisterer {
 		super(Material.ROCK);
 		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		setUnlocalizedName("blockstateless_block");
-		setRegistryName(tut.MODID, "blockstateless_block");
+		setRegistryName(TUT.MODID, "blockstateless_block");
 	}
 
 	@Override
@@ -46,7 +46,7 @@ public class BlockstatelessBlock extends Block implements IModelRegisterer {
 		}
 		ModelResourceLocation blockModel = new ModelResourceLocation(registryName, "normal");
 		ModelResourceLocation itemModel = new ModelResourceLocation(registryName, "inventory");
-		ResourceLocation modelLocation = new ResourceLocation(tut.MODID, "models/block/blockstateless_block.gltf");
+		ResourceLocation modelLocation = new ResourceLocation(TUT.MODID, "models/block/blockstateless_block.gltf");
 		ModelLoaderApi.INSTANCE.registerModel(blockModel, modelLocation, true);
 		ModelLoaderApi.INSTANCE.registerModel(itemModel, modelLocation, true);
 		// Register item model

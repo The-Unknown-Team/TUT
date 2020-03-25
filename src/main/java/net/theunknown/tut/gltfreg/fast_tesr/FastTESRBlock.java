@@ -1,4 +1,7 @@
-package net.mcreator.tut.gltfreg.fast_tesr;
+package net.theunknown.tut.gltfreg.fast_tesr;
+
+import net.theunknown.tut.gltfreg.IModelRegisterer;
+import net.theunknown.tut.TUT;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.client.model.ModelLoader;
@@ -15,9 +18,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.Block;
 
-import net.mcreator.tut.tut;
-import net.mcreator.tut.gltfreg.IModelRegisterer;
-
 import javax.annotation.Nullable;
 
 import com.cout970.modelloader.api.ModelLoaderApi;
@@ -27,7 +27,7 @@ public class FastTESRBlock extends Block implements IModelRegisterer, ITileEntit
 		super(Material.ROCK);
 		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		setUnlocalizedName("fast_tesr_block");
-		setRegistryName(tut.MODID, "fast_tesr_block");
+		setRegistryName(TUT.MODID, "fast_tesr_block");
 		GameRegistry.registerTileEntity(FastTESRTile.class, getRegistryName());
 	}
 
@@ -69,7 +69,7 @@ public class FastTESRBlock extends Block implements IModelRegisterer, ITileEntit
 		}
 		ModelResourceLocation blockModel = new ModelResourceLocation(registryName, "normal");
 		ModelResourceLocation itemModel = new ModelResourceLocation(registryName, "inventory");
-		ResourceLocation modelLocation = new ResourceLocation(tut.MODID, "models/block/fast_tesr_block.gltf");
+		ResourceLocation modelLocation = new ResourceLocation(TUT.MODID, "models/block/fast_tesr_block.gltf");
 		ModelLoaderApi.INSTANCE.registerModel(blockModel, modelLocation, true);
 		ModelLoaderApi.INSTANCE.registerModel(itemModel, modelLocation, true);
 		// Register item model

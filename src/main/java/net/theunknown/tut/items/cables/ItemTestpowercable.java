@@ -1,4 +1,4 @@
-package net.mcreator.tut.items.cables;
+package net.theunknown.tut.items.cables;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;

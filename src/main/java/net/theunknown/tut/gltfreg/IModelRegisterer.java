@@ -1,5 +1,5 @@
-package net.mcreator.tut.gltfreg;
-public interface IModelRegisterer {
+package net.theunknown.tut.gltfreg;
 
-    void registerModels();
+public interface IModelRegisterer {
+	void registerModels();
 }

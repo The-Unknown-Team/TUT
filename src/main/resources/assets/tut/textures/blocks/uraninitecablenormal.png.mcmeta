@@ -1,0 +1,18 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "ctm",
+    "layer": "CUTOUT_MIPPED",
+    "textures": [
+            "tut:blocks/uraninitecable_ctm"
+	
+	
+	],
+		        "extra": {
+				"connect_to": [
+				{ "block": "tut:uraninitecable" }
+            ],
+            "connect_inside": true
+        }
+  }
+}

@@ -1,4 +1,4 @@
-package net.mcreator.tut.blocks;
+package net.theunknown.tut.blocks;
 
 import net.minecraftforge.client.model.ModelLoader;
 

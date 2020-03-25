@@ -1,4 +1,4 @@
-package net.mcreator.tut.items.cables;
+package net.theunknown.tut.items.cables;
 
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;

@@ -1,11 +1,11 @@
-package net.mcreator.tut.blocks;
+package net.theunknown.tut.blocks;
+
+import net.theunknown.tut.TUT;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.common.config.Config;
 
-import net.mcreator.tut.tut;
-
-@Mod.EventBusSubscriber(modid = tut.MODID)
-@Config(modid = tut.MODID)
+@Mod.EventBusSubscriber(modid = TUT.MODID)
+@Config(modid = TUT.MODID)
 public class EnergyConfig {
 }
