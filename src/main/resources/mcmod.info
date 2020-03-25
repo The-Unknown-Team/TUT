@@ -13,9 +13,13 @@
       "JumpWatch, Shadowmaster435",
       "MCreator"
     ],
-    "dependencies": [],
+    "dependencies": [
+      "hypercore"
+    ],
     "dependants": [],
-    "requiredMods": [],
+    "requiredMods": [
+      "hypercore"
+    ],
     "useDependencyInformation": "true"
   }
 ]
