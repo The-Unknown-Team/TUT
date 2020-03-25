@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tut:blocks/deadlogtop",
+    "up": "tut:blocks/deadlogtop",
+    "north": "tut:blocks/deadlog",
+    "east": "tut:blocks/deadlog",
+    "south": "tut:blocks/deadlog",
+    "west": "tut:blocks/deadlog",
+    "particle": "tut:blocks/deadlogtop"
+  }
+}

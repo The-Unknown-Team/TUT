@@ -1,0 +1,15 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "hopper_outside",
+        "3": "furnace_front_off",
+        "top": "hopper_top",
+        "4": "furnace_side",
+        "5": "furnace_top",
+        "inside": "hopper_inside"
+      },
+      "name": "default"
+    }
+  }
+}

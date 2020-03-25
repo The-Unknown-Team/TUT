@@ -1,0 +1,9 @@
+{
+  "parent": "tut:custom/slab",
+  "textures": {
+    "all": "tut:blocks/bronzeslabtop",
+    "particle": "tut:blocks/bronzeslabtop",
+    "0": "tut:blocks/bronzeslabtop",
+    "1": "tut:blocks/bronzeslab"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "piston_side",
+        "3": "piston_inner",
+        "4": "bronzerod",
+        "5": "bronzeblock",
+        "unsticky": "piston_bottom",
+        "platform": "piston_top_normal"
+      },
+      "name": "default"
+    }
+  }
+}

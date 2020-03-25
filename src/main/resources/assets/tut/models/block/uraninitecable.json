@@ -1,0 +1,9 @@
+{
+  "parent": "tut:custom/cable",
+  "textures": {
+    "all": "tut:blocks/uraninitecablenormal",
+    "particle": "tut:blocks/uraninitecablenormal",
+    "0": "tut:blocks/uraninitecablenormal",
+    "1": "tut:blocks/urininitecablelimbnormal"
+  }
+}

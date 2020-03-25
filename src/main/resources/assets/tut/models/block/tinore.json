@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tut:blocks/tinore",
+    "particle": "tut:blocks/tinore"
+  }
+}

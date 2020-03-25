@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tut:blocks/solderingtablebottom",
+    "up": "tut:blocks/solderingtabletop",
+    "north": "tut:blocks/solderingtableside",
+    "east": "tut:blocks/solderingtableside",
+    "south": "tut:blocks/solderingtableside",
+    "west": "tut:blocks/solderingtableside",
+    "particle": "tut:blocks/solderingtablebottom"
+  }
+}

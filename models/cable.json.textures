@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "uraninitecablenormal",
+        "1": "urininitecablelimbnormal"
+      },
+      "name": "default"
+    }
+  }
+}

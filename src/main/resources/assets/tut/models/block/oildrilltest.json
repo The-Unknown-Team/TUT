@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tut:blocks/furnace_top",
+    "particle": "tut:blocks/furnace_top"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "hopper_outside",
+        "top": "hopper_top",
+        "inside": "hopper_inside"
+      },
+      "name": "default"
+    }
+  }
+}

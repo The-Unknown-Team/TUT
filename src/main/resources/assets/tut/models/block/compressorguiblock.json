@@ -1,0 +1,13 @@
+{
+  "parent": "tut:custom/compressor",
+  "textures": {
+    "all": "tut:blocks/piston_side",
+    "particle": "tut:blocks/piston_side",
+    "side": "tut:blocks/piston_side",
+    "3": "tut:blocks/piston_inner",
+    "4": "tut:blocks/bronzerod",
+    "5": "tut:blocks/bronzeblock",
+    "unsticky": "tut:blocks/piston_bottom",
+    "platform": "tut:blocks/piston_top_normal"
+  }
+}

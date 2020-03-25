@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tut:blocks/coarse_dirt",
+    "up": "tut:blocks/deadgrasstop",
+    "north": "tut:blocks/deadgrassside",
+    "east": "tut:blocks/deadgrassside",
+    "south": "tut:blocks/deadgrassside",
+    "west": "tut:blocks/deadgrassside",
+    "particle": "tut:blocks/coarse_dirt"
+  }
+}

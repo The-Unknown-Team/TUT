@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tut:blocks/furnace_top",
+    "up": "tut:blocks/furnace_top",
+    "north": "tut:blocks/crudealloysmelter",
+    "east": "tut:blocks/furnace_side",
+    "south": "tut:blocks/furnace_side",
+    "west": "tut:blocks/furnace_side",
+    "particle": "tut:blocks/furnace_top"
+  }
+}
