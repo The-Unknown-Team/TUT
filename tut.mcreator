@@ -472,14 +472,6 @@
       }
     },
     {
-      "name": "Test",
-      "type": "command",
-      "sortid": 39,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "ClientProxy",
       "type": "procedure",
       "sortid": 40,
