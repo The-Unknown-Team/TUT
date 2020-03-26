@@ -4,10 +4,10 @@
     "name": "TUT",
     "description": "We don't know what this is. We don't know what the tech can do. BE AWARE It can be dangerous!",
     "version": "1.0.0",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
-    "logoFile": "",
+    "credits": "Unknown",
+    "logoFile": "assets/tut/textures/logo.png",
     "mcversion": "1.12.2",
-    "url": "https://mcreator.net",
+    "url": "https://unknown.net",
     "updateUrl": "",
     "authorList": [
       "JumpWatch, Shadowmaster435",

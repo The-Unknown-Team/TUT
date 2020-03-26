@@ -522,8 +522,8 @@
     "en_us": {
       "tile.uraninitecable.name": "Uraninite Cable",
       "tile.deadgrass.name": "Dead Grass",
-      "tile.oildrilltest.name": "Oildrilltest",
       "item.etchedpcb.name": "Etched PCB",
+      "tile.oildrilltest.name": "Oildrilltest",
       "item.goldwire.name": "Gold Wire",
       "fluid.oil": "Oil",
       "tile.solderingtable.name": "Soldering Table",
@@ -546,8 +546,10 @@
     "version": "1.0.0",
     "description": "We don\u0027t know what this is. We don\u0027t know what the tech can do. BE AWARE It can be dangerous!",
     "author": "JumpWatch, Shadowmaster435",
+    "websiteURL": "https://unknown.net",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "logo",
     "requiredMods": [
       "hypercore"
     ],
@@ -557,6 +559,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "1.12.2",
+    "credits": "Unknown",
     "modElementsPackage": "net.theunknown.tut",
     "lockBaseModFiles": false
   },
