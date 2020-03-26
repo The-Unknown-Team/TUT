@@ -57,12 +57,12 @@ public class CommandTest extends ElementsTUT.ModElement {
 
 		@Override
 		public String getName() {
-			return "test";
+			return "test2";
 		}
 
 		@Override
 		public String getUsage(ICommandSender var1) {
-			return "/test [<arguments>]";
+			return "/test2 [<arguments>]";
 		}
 
 		@Override

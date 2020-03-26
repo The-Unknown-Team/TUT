@@ -2,7 +2,7 @@
   "_fv": 6,
   "_type": "command",
   "definition": {
-    "commandName": "test",
+    "commandName": "test2",
     "onCommandExecuted": {
       "name": "TestCommandExecuted"
     }
