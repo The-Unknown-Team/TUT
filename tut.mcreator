@@ -1,6 +1,5 @@
 {
   "id_map": {
-    "DIMENSION": 1,
     "GUI": 2
   },
   "mod_elements": [
@@ -517,53 +516,19 @@
       }
     },
     {
-      "name": "DreadFlint",
-      "type": "item",
-      "sortid": 44,
+      "name": "Deadlands",
+      "type": "dimension",
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "DreadGravel",
-      "type": "block",
-      "sortid": 44,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "DreadGravelBlockDestroyedByPlayer",
-      "type": "procedure",
-      "sortid": 44,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "int"
-          },
-          {
-            "name": "y",
-            "type": "int"
-          },
-          {
-            "name": "z",
-            "type": "int"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+      "ids": {
+        "1": 1
       }
     },
     {
-      "name": "DreadGravelRecipe",
-      "type": "recipe",
-      "sortid": 44,
+      "name": "AlloySmelter",
+      "type": "block",
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -577,48 +542,6 @@
       "ids": {}
     },
     {
-      "name": "Deadlands",
-      "type": "dimension",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {
-        "1": 1
-      }
-    },
-    {
-      "name": "IrradiatedStone",
-      "type": "block",
-      "sortid": 46,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "Uranium235Ore",
-      "type": "block",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "Uranium238Ore",
-      "type": "block",
-      "sortid": 48,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "Uranium238vein",
-      "type": "structure",
-      "sortid": 49,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "Uranium235vein",
       "type": "structure",
       "sortid": 50,
@@ -627,17 +550,9 @@
       "ids": {}
     },
     {
-      "name": "AlloySmelterFurnace",
+      "name": "Uranium235Ore",
       "type": "block",
-      "sortid": 51,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "AlloySmelter",
-      "type": "block",
-      "sortid": 52,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -671,9 +586,93 @@
       }
     },
     {
+      "name": "DreadFlint",
+      "type": "item",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DreadGravel",
+      "type": "block",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AlloySmelterFurnace",
+      "type": "block",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
       "name": "AlloyHopper",
       "type": "block",
       "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Uranium238Ore",
+      "type": "block",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DreadGravelRecipe",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Uranium238vein",
+      "type": "structure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DreadGravelBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IrradiatedStone",
+      "type": "block",
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "ids": {}
