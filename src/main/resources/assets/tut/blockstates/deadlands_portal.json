@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "tut:deadlands_portal_ew"
+    },
+    "axis=x": {
+      "model": "tut:deadlands_portal_ns"
+    },
+    "inventory": {
+      "model": "tut:deadlands_portal_ns"
+    }
+  }
+}

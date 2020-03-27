@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tut:blocks/uranium238ore",
+    "particle": "tut:blocks/uranium238ore"
+  }
+}

@@ -4,7 +4,7 @@
   "definition": {
     "name": "TUT",
     "icon": {
-      "value": "Blocks.SANDSTONE_WALL"
+      "value": "CUSTOM:ProcessingCircuit"
     },
     "showSearch": false
   }

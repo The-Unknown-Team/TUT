@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "normal": {
+      "model": "tut:alloyhopper"
+    },
+    "facing=north": {
+      "model": "tut:alloyhopper"
+    },
+    "facing=east": {
+      "model": "tut:alloyhopper",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tut:alloyhopper",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tut:alloyhopper",
+      "y": 270
+    }
+  }
+}

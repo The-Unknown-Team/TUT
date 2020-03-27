@@ -1,0 +1,19 @@
+{
+  "_fv": 6,
+  "_type": "structure",
+  "definition": {
+    "structure": "uranium238",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First motion blocking block",
+    "spawnProbability": 250000,
+    "minCountPerChunk": 3,
+    "maxCountPerChunk": 6,
+    "spawnLocation": "Underground",
+    "spawnHeightOffset": 0,
+    "spawnWorldTypes": [
+      "CUSTOM:Deadlands"
+    ],
+    "restrictionBlocks": [],
+    "restrictionBiomes": []
+  }
+}

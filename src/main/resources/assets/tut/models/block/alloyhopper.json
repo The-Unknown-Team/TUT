@@ -1,0 +1,10 @@
+{
+  "parent": "tut:custom/alloyhopper",
+  "textures": {
+    "all": "tut:blocks/hopper_inside",
+    "particle": "tut:blocks/hopper_inside",
+    "side": "tut:blocks/hopper_outside",
+    "top": "tut:blocks/hopper_top",
+    "inside": "tut:blocks/hopper_inside"
+  }
+}

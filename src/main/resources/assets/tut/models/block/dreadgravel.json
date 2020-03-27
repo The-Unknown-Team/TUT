@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tut:blocks/dreadgravel",
+    "particle": "tut:blocks/dreadgravel"
+  }
+}

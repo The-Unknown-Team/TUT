@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "normal": {
+      "model": "tut:alloysmelter"
+    },
+    "facing=north": {
+      "model": "tut:alloysmelter"
+    },
+    "facing=east": {
+      "model": "tut:alloysmelter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tut:alloysmelter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tut:alloysmelter",
+      "y": 270
+    }
+  }
+}

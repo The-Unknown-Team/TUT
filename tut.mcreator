@@ -1,5 +1,6 @@
 {
   "id_map": {
+    "DIMENSION": 1,
     "GUI": 2
   },
   "mod_elements": [
@@ -514,29 +515,206 @@
       "metadata": {
         "dependencies": []
       }
+    },
+    {
+      "name": "DreadFlint",
+      "type": "item",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DreadGravel",
+      "type": "block",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DreadGravelBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DreadGravelRecipe",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DeadlandsPlains",
+      "type": "biome",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Deadlands",
+      "type": "dimension",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "1": 1
+      }
+    },
+    {
+      "name": "IrradiatedStone",
+      "type": "block",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Uranium235Ore",
+      "type": "block",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Uranium238Ore",
+      "type": "block",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Uranium238vein",
+      "type": "structure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Uranium235vein",
+      "type": "structure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AlloySmelterFurnace",
+      "type": "block",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AlloySmelter",
+      "type": "block",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AlloyHopperUpdateTick",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AlloyHopper",
+      "type": "block",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "deadlandsportal",
+      "file": "deadlandsportal",
+      "category": "block"
+    }
+  ],
   "language_map": {
     "en_us": {
-      "tile.uraninitecable.name": "Uraninite Cable",
       "tile.deadgrass.name": "Dead Grass",
-      "tile.oildrilltest.name": "Oildrilltest",
       "item.etchedpcb.name": "Etched PCB",
+      "tile.alloysmelter.name": "Alloy Smelter",
       "item.goldwire.name": "Gold Wire",
+      "item.machinecontrolunit.name": "Machine Control Unit",
+      "tile.alloysmelterfurnace.name": "Alloy Smelter Furnace",
+      "tile.uraniniteore.name": "Uraninite Ore",
+      "tile.uraniniteblock.name": "Uraninite Block",
+      "item.dreadflint.name": "Dread Flint",
+      "tile.irradiatedstone.name": "Irradiated Stone",
+      "item.processingcircuit.name": "Processing Circuit",
+      "tile.uraninitecable.name": "Uraninite Cable",
+      "tile.oildrilltest.name": "Oildrilltest",
+      "item.deadlands.name": "Dread Flint And Copper",
       "fluid.oil": "Oil",
       "tile.solderingtable.name": "Soldering Table",
       "tile.deadlog.name": "Dead Wood",
-      "item.machinecontrolunit.name": "Machine Control Unit",
       "fluid.acid": "Acid",
-      "tile.uraniniteore.name": "Uraninite Ore",
+      "tile.dreadgravel.name": "Dread Gravel",
       "item.basiccircuit.name": "Basic Circuit",
-      "tile.uraniniteblock.name": "Uraninite Block",
+      "tile.uranium235ore.name": "Uranium 235 Ore",
+      "tile.uranium238ore.name": "Uranium 238 Ore",
       "item.logiccircuit.name": "Logic Circuit",
+      "tile.alloyhopper.name": "Alloy Hopper",
       "item.unpreppedpcb.name": "Un-Etched PCB",
       "itemGroup.tabtut": "TUT",
-      "item.processingcircuit.name": "Processing Circuit",
       "item.uraninitedust.name": "Uraninite Dust"
     }
   },

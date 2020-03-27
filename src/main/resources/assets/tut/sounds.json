@@ -1,1 +1,11 @@
-{}
+{
+  "deadlandsportal": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "tut:deadlandsportal",
+        "stream": false
+      }
+    ]
+  }
+}

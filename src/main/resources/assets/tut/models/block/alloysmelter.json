@@ -1,0 +1,13 @@
+{
+  "parent": "tut:custom/crudealloysmelter",
+  "textures": {
+    "all": "tut:blocks/fillers",
+    "particle": "tut:blocks/fillers",
+    "side": "tut:blocks/hopper_outside",
+    "3": "tut:blocks/furnace_front_off",
+    "top": "tut:blocks/hopper_top",
+    "4": "tut:blocks/furnace_side",
+    "5": "tut:blocks/furnace_top",
+    "inside": "tut:blocks/hopper_inside"
+  }
+}
