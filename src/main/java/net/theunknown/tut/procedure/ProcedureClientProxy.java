@@ -5,8 +5,7 @@ import net.theunknown.tut.ElementsTUT;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.common.MinecraftForge;
-import net.theunknown.tut.items.cables.Testpowercable;
-import net.theunknown.tut.items.cables.ItemTestpowercable;
+
 import net.minecraft.item.Item;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.Minecraft;
