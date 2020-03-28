@@ -16,12 +16,12 @@ public class TileEntityConsumeRF extends TileEntity implements IEnergyReceiver {
 
 	@Override
 	public int getEnergyStored(EnumFacing from) {
-		return Integer.MAX_VALUE;
+		return 0;
 	}
 
 	@Override
 	public int getMaxEnergyStored(EnumFacing from) {
-		return Integer.MAX_VALUE;
+		return 30;
 	}
 
 	@Override

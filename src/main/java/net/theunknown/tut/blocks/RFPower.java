@@ -13,17 +13,16 @@ import javax.annotation.Nullable;
 
 import java.util.List;
 
-public class RFBlock extends BlockBase implements ITileEntityProvider {
-	public final static String INTERNAL_NAME = "rf_block";
-	public RFBlock() {
+public class RFPower extends BlockBase implements ITileEntityProvider {
+	public final static String INTERNAL_NAME = "rf_power";
+	public RFPower() {
 		super(Material.IRON, INTERNAL_NAME);
 		setUnlocalizedName(INTERNAL_NAME);
 	}
 
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		// return new TileEntityPower();
-		return new TileEntityConsumeRF();
+		return new TileEntityPower();
 	}
 
 	@Override

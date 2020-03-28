@@ -36,7 +36,7 @@ public class Testpowercable extends BaseCableBlock implements ITileEntityProvide
 	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
 		CableTileEntity tileEntity = (CableTileEntity) world.getTileEntity(pos);
 		if (tileEntity != null) {
-			tileEntity.init(EnumCableType.C20, false);
+			tileEntity.init(EnumCableType.C6, false);
 		}
 		super.onBlockPlacedBy(world, pos, state, placer, stack);
 	}
