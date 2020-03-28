@@ -1,0 +1,45 @@
+{
+	"components": [
+		{
+			"type": "item",
+			"item": "tut:copperingot#3",
+			"framed": "true",
+			"x": 10,
+			"y": 40
+		},
+		{
+			"type": "item",
+			"item": "tut:tiningot",
+			"framed": "true",
+			"x": 90,
+			"y": 40
+		},
+		{	
+			"type": "item",
+			"item": "tut:bronzeingot#4",
+			"framed": "true",
+			"x": 50,
+			"y": 40
+		},
+		{
+			"type": "image",
+			"image": "tut:textures/items/arrow.png",
+			"width": 16,
+			"height": 16,
+			"texture_height": 16,
+			"texture_width": 16,
+			"x": 30,
+			"y": 40
+		},
+		{
+			"type": "image",
+			"image": "tut:textures/items/arrowleft.png",
+			"width": 16,
+			"height": 16,
+			"texture_height": 16,
+			"texture_width": 16,
+			"x": 70,
+			"y": 40
+		}
+	]
+}

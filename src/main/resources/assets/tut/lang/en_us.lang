@@ -1,13 +1,16 @@
+item.copperingot.name=Copper Ingot
 tile.deadgrass.name=Dead Grass
 item.etchedpcb.name=Etched PCB
 tile.alloysmelter.name=Alloy Smelter
 item.goldwire.name=Gold Wire
+item.bronzeingot.name=Bronze Ingot
+item.tiningot.name=Tin Ingot
 item.machinecontrolunit.name=Machine Control Unit
 tile.alloysmelterfurnace.name=Alloy Smelter Furnace
 tile.uraniniteore.name=Uraninite Ore
 tile.uraniniteblock.name=Uraninite Block
-item.dreadflint.name=Dread Flint
 tile.irradiatedstone.name=Irradiated Stone
+item.dreadflint.name=Dread Flint
 item.processingcircuit.name=Processing Circuit
 tile.uraninitecable.name=Uraninite Cable
 tile.oildrilltest.name=Oildrilltest

@@ -1,0 +1,14 @@
+{
+    "name": "Basic Circuit Recipe",
+    "icon": "tut:basiccircuit",
+    "category": "tech",
+    "pages": [
+        {
+            "type": "text",
+            "text": "Made in the soldering table"
+        },
+		{
+            "type": "solderingtablebcircuit"
+        }
+    ]
+}

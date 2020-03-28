@@ -676,6 +676,86 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "BronzeIngot",
+      "type": "item",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CopperIngot",
+      "type": "item",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "TinIngot",
+      "type": "item",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AlloySmelterUpdateTick",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AlloySmelterBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -688,16 +768,19 @@
   ],
   "language_map": {
     "en_us": {
+      "item.copperingot.name": "Copper Ingot",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
       "item.goldwire.name": "Gold Wire",
+      "item.bronzeingot.name": "Bronze Ingot",
+      "item.tiningot.name": "Tin Ingot",
       "item.machinecontrolunit.name": "Machine Control Unit",
       "tile.alloysmelterfurnace.name": "Alloy Smelter Furnace",
       "tile.uraniniteore.name": "Uraninite Ore",
       "tile.uraniniteblock.name": "Uraninite Block",
-      "item.dreadflint.name": "Dread Flint",
       "tile.irradiatedstone.name": "Irradiated Stone",
+      "item.dreadflint.name": "Dread Flint",
       "item.processingcircuit.name": "Processing Circuit",
       "tile.uraninitecable.name": "Uraninite Cable",
       "tile.oildrilltest.name": "Oildrilltest",
@@ -723,6 +806,7 @@
     "version": "1.0.0",
     "description": "We don\u0027t know what this is. We don\u0027t know what the tech can do. BE AWARE It can be dangerous!",
     "author": "JumpWatch, Shadowmaster435",
+    "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [
@@ -734,6 +818,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "1.12.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.theunknown.tut",
     "lockBaseModFiles": false
   },
