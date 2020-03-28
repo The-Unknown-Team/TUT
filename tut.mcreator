@@ -676,6 +676,86 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "TinIngot",
+      "type": "item",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CopperIngot",
+      "type": "item",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AlloySmelterBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AlloySmelterUpdateTick",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BronzeIngot",
+      "type": "item",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -688,26 +768,23 @@
   ],
   "language_map": {
     "en_us": {
-      "tile.solars.solar_panel.name": "Solar panel",
-      "tooltip.solar_panel.timeleft.onemin": "Breaks down in 1 minute of use.",
+      "item.copperingot.name": "Copper Ingot",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
       "item.goldwire.name": "Gold Wire",
-      "tooltip.solar_panel.normal": "Normal solar panel. But might break at some point",
+      "item.bronzeingot.name": "Bronze Ingot",
+      "item.tiningot.name": "Tin Ingot",
       "item.machinecontrolunit.name": "Machine Control Unit",
       "tile.alloysmelterfurnace.name": "Alloy Smelter Furnace",
       "tile.uraniniteore.name": "Uraninite Ore",
       "tile.uraniniteblock.name": "Uraninite Block",
-      "item.dreadflint.name": "Dread Flint",
       "tile.irradiatedstone.name": "Irradiated Stone",
+      "item.dreadflint.name": "Dread Flint",
       "item.processingcircuit.name": "Processing Circuit",
-      "tooltip.solar_panel.timeleft.onehour": "Breaks down in 1 hour of use.",
-      "item.tut.solar_cell.name": "Simple solar cell",
       "tile.uraninitecable.name": "Uraninite Cable",
       "tile.oildrilltest.name": "Oildrilltest",
       "item.deadlands.name": "Dread Flint And Copper",
-      "tooltip.solar_panel.timeleft.hours": "Breaks down in %1$s hours of use.",
       "fluid.oil": "Oil",
       "tile.solderingtable.name": "Soldering Table",
       "tile.deadlog.name": "Dead Wood",
@@ -716,13 +793,8 @@
       "item.basiccircuit.name": "Basic Circuit",
       "tile.uranium235ore.name": "Uranium 235 Ore",
       "tile.uranium238ore.name": "Uranium 238 Ore",
-      "tooltip.solar_panel.decayed": "It\u0027s completely busted.",
-      "tooltip.solar_panel.decayed.canrepair": "Your should probably repair it somehow.",
       "item.logiccircuit.name": "Logic Circuit",
-      "tile.solars.solar_panel.decayed.name": "Broken Solar panel",
       "tile.alloyhopper.name": "Alloy Hopper",
-      "tooltip.solar_panel.timeleft.zeromin": "Breaks down in less than one minute of use.",
-      "tooltip.solar_panel.timeleft.normal": "Breaks down in %1$s minutes of use.",
       "item.unpreppedpcb.name": "Un-Etched PCB",
       "itemGroup.tabtut": "TUT",
       "item.uraninitedust.name": "Uraninite Dust"

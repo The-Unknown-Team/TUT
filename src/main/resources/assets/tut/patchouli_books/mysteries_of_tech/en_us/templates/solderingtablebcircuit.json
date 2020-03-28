@@ -1,0 +1,58 @@
+{
+	"components": [
+		{
+			"type": "item",
+			"item": "tut:goldwire",
+			"framed": "true",
+			"x": 50,
+			"y": 40
+		},
+		{
+			"type": "item",
+			"item": "tut:goldwire",
+			"framed": "true",
+			"x": 30,
+			"y": 20
+		},
+		{
+			"type": "item",
+			"item": "tut:etchedpcb",
+			"framed": "true",
+			"x": 50,
+			"y": 20
+		
+		},
+		{
+			"type": "item",
+			"item": "tut:goldwire",
+			"framed": "true",
+			"x": 70,
+			"y": 20
+		},
+		{
+			"type": "item",
+			"item": "tut:goldwire",
+			"framed": "true",
+			"x": 50,
+			"y": 0
+		
+		},
+		{
+			"type": "item",
+			"item": "tut:basiccircuit",
+			"framed": "true",
+			"x": 50,
+			"y": 80
+		},
+		{
+			"type": "image",
+			"image": "tut:textures/items/arrowdown.png",
+			"width": 16,
+			"height": 16,
+			"texture_height": 16,
+			"texture_width": 16,
+			"x": 50,
+			"y": 60
+		}
+	]
+}

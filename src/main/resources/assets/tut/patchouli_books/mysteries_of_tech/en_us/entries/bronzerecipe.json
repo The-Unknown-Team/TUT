@@ -1,0 +1,14 @@
+{
+    "name": "Bronze Ingot Recipe",
+    "icon": "tut:bronzeingot",
+    "category": "tech",
+    "pages": [
+        {
+            "type": "text",
+            "text": "Made in the alloy smelter, the ingots can go in either side"
+        },
+		{
+            "type": "alloysmelterbronze"
+        }
+    ]
+}
