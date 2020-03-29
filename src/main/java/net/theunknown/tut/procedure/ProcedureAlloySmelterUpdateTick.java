@@ -1,8 +1,22 @@
 package net.theunknown.tut.procedure;
 
+import net.theunknown.tut.item.ItemTinIngot;
+import net.theunknown.tut.item.ItemCopperIngot;
+import net.theunknown.tut.ElementsTUT;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.tileentity.TileEntityLockableLoot;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.init.Items;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.properties.PropertyDirection;
+import net.minecraft.block.properties.IProperty;
+
 @ElementsTUT.ModElement.Tag
 public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
-
 	public ProcedureAlloySmelterUpdateTick(ElementsTUT instance) {
 		super(instance, 53);
 	}
@@ -24,12 +38,10 @@ public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
 			System.err.println("Failed to load dependency world for procedure AlloySmelterUpdateTick!");
 			return;
 		}
-
 		int x = (int) dependencies.get("x");
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-
 		if ((((new Object() {
 			public EnumFacing getEnumFacing(BlockPos pos) {
 				try {
@@ -394,7 +406,5 @@ public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
 				world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
 			}
 		}
-
 	}
-
 }

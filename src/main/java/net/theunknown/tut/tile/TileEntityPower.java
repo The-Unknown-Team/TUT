@@ -19,8 +19,11 @@ public class TileEntityPower extends TileEntity implements ITickable, IEnergySto
 	public int maxExtract = ModSettings.blockProperties.transferRate;
 	public int energyReceived = Math.min(capacity - energy, Math.min(this.rfPerTick, 31));
 	public static final Capability<IEnergyStorage> ENERGY_HANDLER = null;
+	private int tempPower = 0;
+	private int currentPower = 0;
 	@Override
 	public void update() {
+		currentPower = tempPower;
 		if (!this.world.isRemote) {
 			if (world.getTotalWorldTime() % 20 == 0) {
 				if (!alreadyUpdated)
@@ -34,9 +37,14 @@ public class TileEntityPower extends TileEntity implements ITickable, IEnergySto
 			if (alreadyUpdated) {
 				if (canProducePower) {
 					energy += energyReceived;
+					tempPower += energyReceived;
 				}
 			}
 		}
+	}
+
+	public int getCurrentPower() {
+		return this.currentPower;
 	}
 
 	@Override

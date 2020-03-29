@@ -22,8 +22,7 @@ public class ProcedureClientProxy extends ElementsTUT.ModElement {
 		super.init(event);
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(ProcedureCommonProxy.testpower_cable), 0,
 				new ModelResourceLocation(TUT.MODID + ":testpower_cable", "inventory"));
-		// Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(TheImmersiveTech.voltmeter,
-		// 0, new ModelResourceLocation(TheImmersiveTech.MODID + ":voltmeter",
-		// "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(ProcedureCommonProxy.voltmeter, 0,
+				new ModelResourceLocation(TUT.MODID + ":voltmeter", "inventory"));
 	}
 }
