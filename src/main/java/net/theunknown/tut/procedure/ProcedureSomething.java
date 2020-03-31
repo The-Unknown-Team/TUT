@@ -38,8 +38,8 @@ public class ProcedureSomething extends ElementsTUT.ModElement {
 	}
 
 	public void preInit(FMLPreInitializationEvent event) {
-		GameRegistry.registerTileEntity(TileEntityConsumeRF.class, new ResourceLocation(TUT.MODID, "tileentity_consume_rf"));
-		GameRegistry.registerTileEntity(TileEntityPower.class, new ResourceLocation(TUT.MODID, "tileentity_power_rf"));
+		GameRegistry.registerTileEntity(TileEntityConsumeRF.class, new ResourceLocation(TUT.MODID, "rf_block"));
+		GameRegistry.registerTileEntity(TileEntityPower.class, new ResourceLocation(TUT.MODID, "rf_power"));
 	}
 
 	@SubscribeEvent

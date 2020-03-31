@@ -23,7 +23,6 @@ public class TileEntityPower extends TileEntity implements ITickable, IEnergySto
 	private int currentPower = 0;
 	@Override
 	public void update() {
-		currentPower = tempPower;
 		if (!this.world.isRemote) {
 			if (world.getTotalWorldTime() % 20 == 0) {
 				if (!alreadyUpdated)
@@ -37,14 +36,13 @@ public class TileEntityPower extends TileEntity implements ITickable, IEnergySto
 			if (alreadyUpdated) {
 				if (canProducePower) {
 					energy += energyReceived;
-					tempPower += energyReceived;
 				}
 			}
 		}
 	}
 
 	public int getCurrentPower() {
-		return this.currentPower;
+		return energyReceived;
 	}
 
 	@Override
@@ -64,6 +62,15 @@ public class TileEntityPower extends TileEntity implements ITickable, IEnergySto
 		return super.hasCapability(capability, facing);
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public <T> T getCapability(net.minecraftforge.common.capabilities.Capability<T> capability, net.minecraft.util.EnumFacing facing) {
+		if (capability != null && capability.getName() == "net.minecraftforge.energy.IEnergyStorage") {
+			return (T) this;
+		}
+		return super.getCapability(capability, facing);
+	}
+
 	@Override
 	public void readFromNBT(NBTTagCompound compound) {
 		if (compound.hasKey("EnergyStored"))
@@ -76,15 +83,6 @@ public class TileEntityPower extends TileEntity implements ITickable, IEnergySto
 		NBTTagCompound tag = super.writeToNBT(compound);
 		tag.setInteger("EnergyStored", this.energy);
 		return tag;
-	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public <T> T getCapability(net.minecraftforge.common.capabilities.Capability<T> capability, net.minecraft.util.EnumFacing facing) {
-		if (capability != null && capability.getName() == "net.minecraftforge.energy.IEnergyStorage") {
-			return (T) this;
-		}
-		return super.getCapability(capability, facing);
 	}
 
 	@Override

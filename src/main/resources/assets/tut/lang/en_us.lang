@@ -1,8 +1,10 @@
 item.copperingot.name=Copper Ingot
+item.voltmeter.name=Voltmeter
 tile.deadgrass.name=Dead Grass
 item.etchedpcb.name=Etched PCB
 tile.alloysmelter.name=Alloy Smelter
 item.goldwire.name=Gold Wire
+tooltip.solar_panel.normal=Solar panel generates %1$ RF
 item.bronzeingot.name=Bronze Ingot
 item.tiningot.name=Tin Ingot
 item.machinecontrolunit.name=Machine Control Unit

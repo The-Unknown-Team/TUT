@@ -12,6 +12,9 @@ public class ModSettings {
 		public int EnergyCapacity = 40000;
 		@Config.Comment({"How much RF it can outout to other blocks per tick. [default: 40]"})
 		public int transferRate = 40;
-		
+		@Config.Comment({"How much RF the Energy Furnace can contain. [default: 40000]"})
+		public int Furnacecapacity = 40000;
+		@Config.Comment({"How much RF the Energy Furnace can take in. [default:500]"})
+		public int inputRate = 500;
 	}
 }

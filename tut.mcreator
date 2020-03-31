@@ -773,10 +773,12 @@
   "language_map": {
     "en_us": {
       "item.copperingot.name": "Copper Ingot",
+      "item.voltmeter.name": "Voltmeter",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
       "item.goldwire.name": "Gold Wire",
+      "tooltip.solar_panel.normal": "Solar panel generates %1$ RF",
       "item.bronzeingot.name": "Bronze Ingot",
       "item.tiningot.name": "Tin Ingot",
       "item.machinecontrolunit.name": "Machine Control Unit",
@@ -810,8 +812,10 @@
     "version": "1.0.0",
     "description": "We don\u0027t know what this is. We don\u0027t know what the tech can do. BE AWARE It can be dangerous!",
     "author": "JumpWatch, Shadowmaster435",
+    "websiteURL": "https://unknown.net",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "logo",
     "requiredMods": [
       "hypercore"
     ],
@@ -821,6 +825,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "1.12.2",
+    "credits": "idk",
     "modElementsPackage": "net.theunknown.tut",
     "lockBaseModFiles": false
   },

@@ -18,8 +18,8 @@ compileJava {
     sourceCompatibility = targetCompatibility = '1.8'
 }
 dependencies {
-    provided files("lib/HyperCore-1.6.jar")
-    compile files("lib/HyperCore-1.6.jar")
+    provided files("lib/HyperCore-1.8.jar")
+    compile files("lib/HyperCore-1.8.jar")
     provided files("lib/RedstoneFlux-1.12-2.1.0.6-universal.jar")
     compile files("lib/RedstoneFlux-1.12-2.1.0.6-universal.jar")
     provided files("run/mods/modelloader-1.1.7.jar")

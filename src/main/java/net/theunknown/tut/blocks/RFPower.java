@@ -1,11 +1,16 @@
 package net.theunknown.tut.blocks;
 
 import net.theunknown.tut.tile.TileEntityPower;
+import net.theunknown.tut.ModSettings;
+
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
 
 import net.minecraft.world.World;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.ITileEntityProvider;
 
@@ -20,12 +25,18 @@ public class RFPower extends BlockBase implements ITileEntityProvider {
 		setUnlocalizedName(INTERNAL_NAME);
 	}
 
+
+
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		return new TileEntityPower();
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		if (stack.getMetadata() == 0) {
+			tooltip.add(I18n.format("tooltip.solar_panel.normal", Integer.toString(ModSettings.blockProperties.RFpertick)));
+		}
 	}
 }
