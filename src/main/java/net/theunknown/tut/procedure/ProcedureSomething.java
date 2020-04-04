@@ -1,9 +1,11 @@
 package net.theunknown.tut.procedure;
 
 import net.theunknown.tut.tile.TileEntityPower;
+import net.theunknown.tut.tile.TileEntitiyEletricFurnace;
 import net.theunknown.tut.blocks.TileEntityConsumeRF;
 import net.theunknown.tut.blocks.RFPower;
 import net.theunknown.tut.blocks.RFBlock;
+import net.theunknown.tut.blocks.BlockElectricFurnace;
 import net.theunknown.tut.TUT;
 import net.theunknown.tut.ElementsTUT;
 
@@ -31,21 +33,26 @@ public class ProcedureSomething extends ElementsTUT.ModElement {
 	private static RFBlock rfBlock;
 	@GameRegistry.ObjectHolder(RFPower.INTERNAL_NAME)
 	private static RFPower rfPower;
+	@GameRegistry.ObjectHolder(BlockElectricFurnace.INTERNAL_NAME)
+	private static BlockElectricFurnace blockElectricFurnace;
 	@SubscribeEvent
 	public static void onRegisterBlocks(RegistryEvent.Register<Block> event) {
 		event.getRegistry().register(new RFBlock());
 		event.getRegistry().register(new RFPower());
+		event.getRegistry().register(new BlockElectricFurnace());
 	}
 
 	public void preInit(FMLPreInitializationEvent event) {
 		GameRegistry.registerTileEntity(TileEntityConsumeRF.class, new ResourceLocation(TUT.MODID, "rf_block"));
 		GameRegistry.registerTileEntity(TileEntityPower.class, new ResourceLocation(TUT.MODID, "rf_power"));
+		GameRegistry.registerTileEntity(TileEntitiyEletricFurnace.class, new ResourceLocation(TUT.MODID, "electric_furnace"));
 	}
 
 	@SubscribeEvent
 	public static void onRegisterItems(RegistryEvent.Register<Item> event) {
 		event.getRegistry().register(rfBlock.createItemBlock());
 		event.getRegistry().register(rfPower.createItemBlock());
+		event.getRegistry().register(blockElectricFurnace.createItemBlock());
 	}
 
 	@SubscribeEvent
@@ -53,5 +60,6 @@ public class ProcedureSomething extends ElementsTUT.ModElement {
 	public static void onRegisterModels(ModelRegistryEvent event) {
 		rfBlock.registerItemModel(Item.getItemFromBlock(rfBlock));
 		rfPower.registerItemModel(Item.getItemFromBlock(rfPower));
+		blockElectricFurnace.registerItemModel(Item.getItemFromBlock(blockElectricFurnace));
 	}
 }

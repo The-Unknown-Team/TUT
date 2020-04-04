@@ -758,9 +758,9 @@
       "ids": {}
     },
     {
-      "name": "NickelIngot",
-      "type": "item",
-      "sortid": 57,
+      "name": "BronzePickaxe",
+      "type": "tool",
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -774,9 +774,17 @@
       "ids": {}
     },
     {
-      "name": "BronzePickaxe",
+      "name": "BronzeShovel",
       "type": "tool",
-      "sortid": 59,
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "NickelIngot",
+      "type": "item",
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -785,14 +793,6 @@
       "name": "BronzeAxe",
       "type": "tool",
       "sortid": 60,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "BronzeShovel",
-      "type": "tool",
-      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -879,5 +879,5 @@
     "modElementsPackage": "net.theunknown.tut",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000214217
+  "mcreatorVersion": 202000213616
 }

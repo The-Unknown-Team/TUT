@@ -1,7 +1,5 @@
 package net.theunknown.tut.blocks;
 
-import net.theunknown.tut.tile.TileEntitiyEletricFurnace;
-
 import net.minecraft.world.World;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.item.ItemStack;
@@ -23,8 +21,8 @@ public class RFBlock extends BlockBase implements ITileEntityProvider {
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		// return new TileEntityPower();
-		// return new TileEntityConsumeRF();
-		return new TileEntitiyEletricFurnace(); //For testing
+		return new TileEntityConsumeRF();
+		// return new TileEntitiyEletricFurnace(); Was for testing
 	}
 
 	@Override

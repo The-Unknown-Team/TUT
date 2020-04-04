@@ -11,6 +11,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.ITileEntityProvider;
 
@@ -25,11 +26,14 @@ public class RFPower extends BlockBase implements ITileEntityProvider {
 		setUnlocalizedName(INTERNAL_NAME);
 	}
 
-
-
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		return new TileEntityPower();
+	}
+
+	@Override
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
 	}
 
 	@Override
