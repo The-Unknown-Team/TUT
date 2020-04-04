@@ -1,13 +1,10 @@
 package net.theunknown.tut.procedure;
 
+import net.theunknown.tut.block.BlockAlloySmelterFurnace;
 import net.theunknown.tut.ElementsTUT;
 
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.properties.IProperty;
 
 @ElementsTUT.ModElement.Tag
 public class ProcedureAlloySmelterBlockDestroyedByPlayer extends ElementsTUT.ModElement {
@@ -36,73 +33,29 @@ public class ProcedureAlloySmelterBlockDestroyedByPlayer extends ElementsTUT.Mod
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-		if ((((new Object() {
-			public EnumFacing getEnumFacing(BlockPos pos) {
-				try {
-					IBlockState _bs = world.getBlockState(pos);
-					for (IProperty<?> prop : _bs.getProperties().keySet()) {
-						if (prop.getName().equals("facing"))
-							return _bs.getValue((PropertyDirection) prop);
-					}
-					return EnumFacing.NORTH;
-				} catch (Exception e) {
-					return EnumFacing.NORTH;
-				}
-			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.SOUTH) || ((new Object() {
-			public EnumFacing getEnumFacing(BlockPos pos) {
-				try {
-					IBlockState _bs = world.getBlockState(pos);
-					for (IProperty<?> prop : _bs.getProperties().keySet()) {
-						if (prop.getName().equals("facing"))
-							return _bs.getValue((PropertyDirection) prop);
-					}
-					return EnumFacing.NORTH;
-				} catch (Exception e) {
-					return EnumFacing.NORTH;
-				}
-			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.NORTH))) {
-			world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1))).getBlock().dropBlockAsItem(world,
-					new BlockPos((int) x, (int) y, (int) z), world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1))), 1);
-			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) (z - 1)));
-			world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1))).getBlock().dropBlockAsItem(world,
-					new BlockPos((int) x, (int) y, (int) z), world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1))), 1);
-			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) (z + 1)));
-		}
-		if ((((new Object() {
-			public EnumFacing getEnumFacing(BlockPos pos) {
-				try {
-					IBlockState _bs = world.getBlockState(pos);
-					for (IProperty<?> prop : _bs.getProperties().keySet()) {
-						if (prop.getName().equals("facing"))
-							return _bs.getValue((PropertyDirection) prop);
-					}
-					return EnumFacing.NORTH;
-				} catch (Exception e) {
-					return EnumFacing.NORTH;
-				}
-			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.WEST) || ((new Object() {
-			public EnumFacing getEnumFacing(BlockPos pos) {
-				try {
-					IBlockState _bs = world.getBlockState(pos);
-					for (IProperty<?> prop : _bs.getProperties().keySet()) {
-						if (prop.getName().equals("facing"))
-							return _bs.getValue((PropertyDirection) prop);
-					}
-					return EnumFacing.NORTH;
-				} catch (Exception e) {
-					return EnumFacing.NORTH;
-				}
-			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.EAST))) {
-			world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)).getBlock().dropBlockAsItem(world,
-					new BlockPos((int) x, (int) y, (int) z), world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)), 1);
-			world.setBlockToAir(new BlockPos((int) (x - 1), (int) y, (int) z));
+		if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == BlockAlloySmelterFurnace.block.getDefaultState()
+				.getBlock())) {
 			world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)).getBlock().dropBlockAsItem(world,
 					new BlockPos((int) x, (int) y, (int) z), world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)), 1);
 			world.setBlockToAir(new BlockPos((int) (x + 1), (int) y, (int) z));
+		}
+		if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == BlockAlloySmelterFurnace.block.getDefaultState()
+				.getBlock())) {
+			world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)).getBlock().dropBlockAsItem(world,
+					new BlockPos((int) x, (int) y, (int) z), world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)), 1);
+			world.setBlockToAir(new BlockPos((int) (x - 1), (int) y, (int) z));
+		}
+		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == BlockAlloySmelterFurnace.block.getDefaultState()
+				.getBlock())) {
+			world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1))).getBlock().dropBlockAsItem(world,
+					new BlockPos((int) x, (int) y, (int) z), world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1))), 1);
+			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) (z - 1)));
+		}
+		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == BlockAlloySmelterFurnace.block.getDefaultState()
+				.getBlock())) {
+			world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1))).getBlock().dropBlockAsItem(world,
+					new BlockPos((int) x, (int) y, (int) z), world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1))), 1);
+			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) (z + 1)));
 		}
 	}
 }

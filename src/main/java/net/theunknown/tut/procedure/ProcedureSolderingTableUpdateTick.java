@@ -82,8 +82,11 @@ public class ProcedureSolderingTableUpdateTick extends ElementsTUT.ModElement {
 						.getItem())) {
 					{
 						TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-						if (inv != null && (inv instanceof TileEntityLockableLoot))
-							((TileEntityLockableLoot) inv).setInventorySlotContents((int) (5), new ItemStack(ItemBasicCircuit.block, (int) (1)));
+						if (inv != null && (inv instanceof TileEntityLockableLoot)) {
+							ItemStack _setstack = new ItemStack(ItemBasicCircuit.block, (int) (1));
+							_setstack.setCount(1);
+							((TileEntityLockableLoot) inv).setInventorySlotContents((int) (5), _setstack);
+						}
 					}
 				}
 			}

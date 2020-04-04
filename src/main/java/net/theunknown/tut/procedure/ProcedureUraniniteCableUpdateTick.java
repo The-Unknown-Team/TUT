@@ -52,48 +52,66 @@ public class ProcedureUraniniteCableUpdateTick extends ElementsTUT.ModElement {
 					.getBlock())) {
 				{
 					TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) (y + 1), (int) z));
-					if (inv != null && (inv instanceof TileEntityLockableLoot))
-						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), new ItemStack(Blocks.STONE, (int) (64), 0));
+					if (inv != null && (inv instanceof TileEntityLockableLoot)) {
+						ItemStack _setstack = new ItemStack(Blocks.STONE, (int) (1), 0);
+						_setstack.setCount(64);
+						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), _setstack);
+					}
 				}
 			}
 			if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == BlockUraniniteCable.block.getDefaultState()
 					.getBlock())) {
 				{
 					TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
-					if (inv != null && (inv instanceof TileEntityLockableLoot))
-						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), new ItemStack(Blocks.STONE, (int) (64), 0));
+					if (inv != null && (inv instanceof TileEntityLockableLoot)) {
+						ItemStack _setstack = new ItemStack(Blocks.STONE, (int) (1), 0);
+						_setstack.setCount(64);
+						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), _setstack);
+					}
 				}
 			}
 			if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == BlockUraniniteCable.block.getDefaultState()
 					.getBlock())) {
 				{
 					TileEntity inv = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
-					if (inv != null && (inv instanceof TileEntityLockableLoot))
-						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), new ItemStack(Blocks.STONE, (int) (64), 0));
+					if (inv != null && (inv instanceof TileEntityLockableLoot)) {
+						ItemStack _setstack = new ItemStack(Blocks.STONE, (int) (1), 0);
+						_setstack.setCount(64);
+						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), _setstack);
+					}
 				}
 			}
 			if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == BlockUraniniteCable.block.getDefaultState()
 					.getBlock())) {
 				{
 					TileEntity inv = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
-					if (inv != null && (inv instanceof TileEntityLockableLoot))
-						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), new ItemStack(Blocks.STONE, (int) (64), 0));
+					if (inv != null && (inv instanceof TileEntityLockableLoot)) {
+						ItemStack _setstack = new ItemStack(Blocks.STONE, (int) (1), 0);
+						_setstack.setCount(64);
+						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), _setstack);
+					}
 				}
 			}
 			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == BlockUraniniteCable.block.getDefaultState()
 					.getBlock())) {
 				{
 					TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
-					if (inv != null && (inv instanceof TileEntityLockableLoot))
-						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), new ItemStack(Blocks.STONE, (int) (64), 0));
+					if (inv != null && (inv instanceof TileEntityLockableLoot)) {
+						ItemStack _setstack = new ItemStack(Blocks.STONE, (int) (1), 0);
+						_setstack.setCount(64);
+						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), _setstack);
+					}
 				}
 			}
 			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == BlockUraniniteCable.block.getDefaultState()
 					.getBlock())) {
 				{
 					TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
-					if (inv != null && (inv instanceof TileEntityLockableLoot))
-						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), new ItemStack(Blocks.STONE, (int) (64), 0));
+					if (inv != null && (inv instanceof TileEntityLockableLoot)) {
+						ItemStack _setstack = new ItemStack(Blocks.STONE, (int) (1), 0);
+						_setstack.setCount(64);
+						((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), _setstack);
+					}
 				}
 			}
 		} else {
