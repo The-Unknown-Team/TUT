@@ -830,17 +830,17 @@
       "ids": {}
     },
     {
-      "name": "InvarShovel",
+      "name": "InvarHoe",
       "type": "tool",
-      "sortid": 66,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "ids": {}
     },
     {
-      "name": "InvarHoe",
+      "name": "InvarShovel",
       "type": "tool",
-      "sortid": 67,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "ids": {}
