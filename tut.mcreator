@@ -804,6 +804,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "InvarSword",
+      "type": "tool",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -816,9 +824,9 @@
   ],
   "language_map": {
     "en_us": {
-      "item.copperingot.name": "Copper Ingot",
-      "item.voltmeter.name": "Voltmeter",
       "item.nickelingot.name": "Nickel Ingot",
+      "item.voltmeter.name": "Voltmeter",
+      "item.copperingot.name": "Copper Ingot",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
@@ -849,6 +857,7 @@
       "item.basiccircuit.name": "Basic Circuit",
       "tile.uranium235ore.name": "Uranium 235 Ore",
       "tile.uranium238ore.name": "Uranium 238 Ore",
+      "item.invarsword.name": "Invar Sword",
       "item.logiccircuit.name": "Logic Circuit",
       "tile.alloyhopper.name": "Alloy Hopper",
       "item.unpreppedpcb.name": "Un-Etched PCB",

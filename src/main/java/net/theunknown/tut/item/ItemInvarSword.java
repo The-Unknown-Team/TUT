@@ -25,16 +25,16 @@ import java.util.HashMap;
 import com.google.common.collect.Multimap;
 
 @ElementsTUT.ModElement.Tag
-public class ItemBronzeSword extends ElementsTUT.ModElement {
-	@GameRegistry.ObjectHolder("tut:bronzesword")
+public class ItemInvarSword extends ElementsTUT.ModElement {
+	@GameRegistry.ObjectHolder("tut:invarsword")
 	public static final Item block = null;
-	public ItemBronzeSword(ElementsTUT instance) {
-		super(instance, 58);
+	public ItemInvarSword(ElementsTUT instance) {
+		super(instance, 63);
 	}
 
 	@Override
 	public void initElements() {
-		elements.items.add(() -> new ItemSword(EnumHelper.addToolMaterial("BRONZESWORD", 1, 500, 6.5f, 2.5f, 2)) {
+		elements.items.add(() -> new ItemSword(EnumHelper.addToolMaterial("INVARSWORD", 1, 750, 7f, 3f, 2)) {
 			@Override
 			public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot slot) {
 				Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(slot);
@@ -52,12 +52,12 @@ public class ItemBronzeSword extends ElementsTUT.ModElement {
 				ret.put("sword", 1);
 				return ret.keySet();
 			}
-		}.setUnlocalizedName("bronzesword").setRegistryName("bronzesword").setCreativeTab(CreativeTabs.TOOLS));
+		}.setUnlocalizedName("invarsword").setRegistryName("invarsword").setCreativeTab(CreativeTabs.TOOLS));
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
-		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("tut:bronzesword", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("tut:invarsword", "inventory"));
 	}
 }
