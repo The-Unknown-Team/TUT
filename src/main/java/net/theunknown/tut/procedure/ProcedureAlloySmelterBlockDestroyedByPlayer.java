@@ -3,11 +3,8 @@ package net.theunknown.tut.procedure;
 import net.theunknown.tut.ElementsTUT;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.Entity;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.IProperty;
@@ -19,10 +16,6 @@ public class ProcedureAlloySmelterBlockDestroyedByPlayer extends ElementsTUT.Mod
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure AlloySmelterBlockDestroyedByPlayer!");
-			return;
-		}
 		if (dependencies.get("x") == null) {
 			System.err.println("Failed to load dependency x for procedure AlloySmelterBlockDestroyedByPlayer!");
 			return;
@@ -39,7 +32,6 @@ public class ProcedureAlloySmelterBlockDestroyedByPlayer extends ElementsTUT.Mod
 			System.err.println("Failed to load dependency world for procedure AlloySmelterBlockDestroyedByPlayer!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
 		int x = (int) dependencies.get("x");
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
@@ -111,9 +103,6 @@ public class ProcedureAlloySmelterBlockDestroyedByPlayer extends ElementsTUT.Mod
 			world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)).getBlock().dropBlockAsItem(world,
 					new BlockPos((int) x, (int) y, (int) z), world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)), 1);
 			world.setBlockToAir(new BlockPos((int) (x + 1), (int) y, (int) z));
-			if (entity instanceof EntityPlayer && !world.isRemote) {
-				((EntityPlayer) entity).sendStatusMessage(new TextComponentString("testing"), (false));
-			}
 		}
 	}
 }

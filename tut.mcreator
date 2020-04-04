@@ -703,10 +703,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "int"
           },
@@ -772,13 +768,13 @@
   ],
   "language_map": {
     "en_us": {
-      "item.voltmeter.name": "Voltmeter",
       "item.copperingot.name": "Copper Ingot",
+      "item.voltmeter.name": "Voltmeter",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
       "item.goldwire.name": "Gold Wire",
-      "tooltip.solar_panel.normal": "Solar panel generates %1$ RF",
+      "tooltip.solar_panel.normal": "Solar panel generates %d RF",
       "item.bronzeingot.name": "Bronze Ingot",
       "item.tiningot.name": "Tin Ingot",
       "item.machinecontrolunit.name": "Machine Control Unit",
@@ -794,6 +790,7 @@
       "fluid.oil": "Oil",
       "tile.solderingtable.name": "Soldering Table",
       "tile.deadlog.name": "Dead Wood",
+      "tile.rf_power.name": "Solar Panel",
       "fluid.acid": "Acid",
       "tile.dreadgravel.name": "Dread Gravel",
       "item.basiccircuit.name": "Basic Circuit",

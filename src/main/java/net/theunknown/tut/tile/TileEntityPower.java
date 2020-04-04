@@ -11,12 +11,12 @@ import net.minecraft.nbt.NBTTagCompound;
 
 public class TileEntityPower extends TileEntity implements ITickable, IEnergyStorage {
 	public int energy = 0;
-	public int capacity = ModSettings.blockProperties.EnergyCapacity;
+	public int capacity = ModSettings.solarProperties.EnergyCapacity;
 	public int maxReceive = 0;
 	private boolean alreadyUpdated = false;
 	private boolean canProducePower;
-	public int rfPerTick = ModSettings.blockProperties.RFpertick;
-	public int maxExtract = ModSettings.blockProperties.transferRate;
+	public int rfPerTick = ModSettings.solarProperties.RFpertick;
+	public int maxExtract = ModSettings.solarProperties.transferRate;
 	public int energyReceived = Math.min(capacity - energy, Math.min(this.rfPerTick, 31));
 	public static final Capability<IEnergyStorage> ENERGY_HANDLER = null;
 	private int tempPower = 0;
@@ -35,7 +35,11 @@ public class TileEntityPower extends TileEntity implements ITickable, IEnergySto
 			}
 			if (alreadyUpdated) {
 				if (canProducePower) {
-					energy += energyReceived;
+					if (this.energy > capacity) {
+						this.energy = capacity;
+					} else {
+						energy += energyReceived;
+					}
 				}
 			}
 		}
