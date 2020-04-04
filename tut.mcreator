@@ -703,10 +703,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "int"
           },
@@ -760,6 +756,54 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "NickelIngot",
+      "type": "item",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BronzeSword",
+      "type": "tool",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BronzePickaxe",
+      "type": "tool",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BronzeAxe",
+      "type": "tool",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BronzeShovel",
+      "type": "tool",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BronzeHoe",
+      "type": "tool",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -772,8 +816,9 @@
   ],
   "language_map": {
     "en_us": {
-      "item.voltmeter.name": "Voltmeter",
       "item.copperingot.name": "Copper Ingot",
+      "item.voltmeter.name": "Voltmeter",
+      "item.nickelingot.name": "Nickel Ingot",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
@@ -787,13 +832,18 @@
       "tile.uraniniteblock.name": "Uraninite Block",
       "tile.irradiatedstone.name": "Irradiated Stone",
       "item.dreadflint.name": "Dread Flint",
+      "item.bronzesword.name": "Bronze Sword",
+      "item.bronzeshovel.name": "Bronze Shovel",
       "item.processingcircuit.name": "Processing Circuit",
       "tile.uraninitecable.name": "Uraninite Cable",
       "tile.oildrilltest.name": "Oildrilltest",
       "item.deadlands.name": "Dread Flint And Copper",
+      "item.bronzeaxe.name": "Bronze Axe",
+      "item.bronzehoe.name": "Bronze Hoe",
       "fluid.oil": "Oil",
       "tile.solderingtable.name": "Soldering Table",
       "tile.deadlog.name": "Dead Wood",
+      "item.bronzepickaxe.name": "Bronze Pickaxe",
       "fluid.acid": "Acid",
       "tile.dreadgravel.name": "Dread Gravel",
       "item.basiccircuit.name": "Basic Circuit",
@@ -829,5 +879,5 @@
     "modElementsPackage": "net.theunknown.tut",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000213616
+  "mcreatorVersion": 202000214217
 }

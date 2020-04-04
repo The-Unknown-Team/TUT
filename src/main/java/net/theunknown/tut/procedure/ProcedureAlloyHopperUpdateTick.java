@@ -111,6 +111,60 @@ public class ProcedureAlloyHopperUpdateTick extends ElementsTUT.ModElement {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
+		}
+		if ((((new Object() {
+			public EnumFacing getEnumFacing(BlockPos pos) {
+				try {
+					IBlockState _bs = world.getBlockState(pos);
+					for (IProperty<?> prop : _bs.getProperties().keySet()) {
+						if (prop.getName().equals("facing"))
+							return _bs.getValue((PropertyDirection) prop);
+					}
+					return EnumFacing.NORTH;
+				} catch (Exception e) {
+					return EnumFacing.NORTH;
+				}
+			}
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) (z + 1)))) == (new Object() {
+			public EnumFacing getEnumFacing(BlockPos pos) {
+				try {
+					IBlockState _bs = world.getBlockState(pos);
+					for (IProperty<?> prop : _bs.getProperties().keySet()) {
+						if (prop.getName().equals("facing"))
+							return _bs.getValue((PropertyDirection) prop);
+					}
+					return EnumFacing.NORTH;
+				} catch (Exception e) {
+					return EnumFacing.NORTH;
+				}
+			}
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z)))) && ((new Object() {
+			public EnumFacing getEnumFacing(BlockPos pos) {
+				try {
+					IBlockState _bs = world.getBlockState(pos);
+					for (IProperty<?> prop : _bs.getProperties().keySet()) {
+						if (prop.getName().equals("facing"))
+							return _bs.getValue((PropertyDirection) prop);
+					}
+					return EnumFacing.NORTH;
+				} catch (Exception e) {
+					return EnumFacing.NORTH;
+				}
+			}
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) (z - 1)))) == (new Object() {
+			public EnumFacing getEnumFacing(BlockPos pos) {
+				try {
+					IBlockState _bs = world.getBlockState(pos);
+					for (IProperty<?> prop : _bs.getProperties().keySet()) {
+						if (prop.getName().equals("facing"))
+							return _bs.getValue((PropertyDirection) prop);
+					}
+					return EnumFacing.NORTH;
+				} catch (Exception e) {
+					return EnumFacing.NORTH;
+				}
+			}
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z)))))) {
 			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.FURNACE.getDefaultState().getBlock())
 					&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.FURNACE.getDefaultState()
 							.getBlock()))) {

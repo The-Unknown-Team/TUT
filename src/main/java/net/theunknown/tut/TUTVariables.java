@@ -101,6 +101,7 @@ public class TUTVariables {
 
 		private void syncData(WorldSavedDataSyncMessage message, MessageContext context, World world) {
 			if (context.side == Side.SERVER) {
+				message.data.markDirty();
 				if (message.type == 0)
 					TUT.PACKET_HANDLER.sendToAll(message);
 				else

@@ -47,8 +47,11 @@ public class ProcedureUraniniteCableRedstoneOn extends ElementsTUT.ModElement {
 		}
 		{
 			TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-			if (inv != null && (inv instanceof TileEntityLockableLoot))
-				((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), new ItemStack(Blocks.STONE, (int) (64), 0));
+			if (inv != null && (inv instanceof TileEntityLockableLoot)) {
+				ItemStack _setstack = new ItemStack(Blocks.STONE, (int) (1), 0);
+				_setstack.setCount(64);
+				((TileEntityLockableLoot) inv).setInventorySlotContents((int) (0), _setstack);
+			}
 		}
 	}
 }

@@ -1,0 +1,27 @@
+{
+  "_fv": 6,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "bronzeshovel",
+    "customModelName": "Normal",
+    "name": "Bronze Shovel",
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 1,
+    "efficiency": 6.5,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 3.5,
+    "usageCount": 500,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:BronzeIngot"
+      }
+    ]
+  }
+}

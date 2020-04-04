@@ -1,0 +1,27 @@
+{
+  "_fv": 6,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "bronzepickaxe",
+    "customModelName": "Normal",
+    "name": "Bronze Pickaxe",
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 3,
+    "efficiency": 6.5,
+    "attackSpeed": 1.2,
+    "enchantability": 2,
+    "damageVsEntity": 4.5,
+    "usageCount": 500,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:BronzeIngot"
+      }
+    ]
+  }
+}

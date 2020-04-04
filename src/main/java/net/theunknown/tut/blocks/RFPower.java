@@ -36,7 +36,7 @@ public class RFPower extends BlockBase implements ITileEntityProvider {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		if (stack.getMetadata() == 0) {
-			tooltip.add(I18n.format("tooltip.solar_panel.normal", Integer.toString(ModSettings.blockProperties.RFpertick)));
+			tooltip.add(I18n.format("tooltip.solar_panel.normal", Integer.toString(ModSettings.solarProperties.RFpertick)));
 		}
 	}
 }

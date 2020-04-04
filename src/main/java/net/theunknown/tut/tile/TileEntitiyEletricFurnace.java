@@ -1,5 +1,6 @@
 package net.theunknown.tut.tile;
 
+import net.theunknown.tut.blocks.recipes.FurnaceRecipes;
 import net.theunknown.tut.ModSettings;
 
 import net.minecraftforge.items.ItemStackHandler;
@@ -16,13 +17,50 @@ import net.minecraft.entity.player.EntityPlayer;
 public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, IEnergyStorage {
 	int tick;
 	public int energy = 0;
-	public int storage = ModSettings.blockProperties.Furnacecapacity;
+	public int storage = ModSettings.furnaceProperties.Furnacecapacity;
 	public ItemStackHandler handler = new ItemStackHandler(3);
 	private String customName;
-	public int cookTime = storage;
+	public int cookTime;
 	private ItemStack smelting = ItemStack.EMPTY;
 	@Override
 	public void update() {
+		tick++;
+		if (tick > 20)
+			tick = 0;
+		if (tick == 0) {
+			// System.out.println(Integer.toString(energy));
+		}
+		if (world.isBlockPowered(pos))
+			energy += 100;
+		ItemStack[] inputs = new ItemStack[]{handler.getStackInSlot(0), handler.getStackInSlot(1)};
+		if (energy >= 20) {
+			if (cookTime > 0) {
+				cookTime++;
+				if (cookTime == 100) {
+					if (handler.getStackInSlot(2).getCount() > 0) {
+						handler.getStackInSlot(2).grow(1);
+					} else {
+						handler.insertItem(2, smelting, false);
+					}
+					smelting = ItemStack.EMPTY;
+					cookTime = 0;
+					return;
+				}
+			} else {
+				if (!inputs[0].isEmpty() && !inputs[1].isEmpty()) {
+					ItemStack output = FurnaceRecipes.getInstance().getEletricResult(inputs[0], inputs[1]);
+					if (!output.isEmpty()) {
+						smelting = output;
+						cookTime++;
+						inputs[0].shrink(1);
+						inputs[1].shrink(1);
+						handler.setStackInSlot(0, inputs[0]);
+						handler.setStackInSlot(1, inputs[1]);
+						energy -= 20;
+					}
+				}
+			}
+		}
 	}
 
 	@Override
@@ -44,12 +82,13 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound compound) {
-		NBTTagCompound tag = super.writeToNBT(compound);
+		super.writeToNBT(compound);
 		compound.setTag("Inventory", this.handler.serializeNBT());
 		compound.setInteger("CookTime", cookTime);
 		compound.setInteger("GuiEnergy", energy);
 		compound.setString("Name", getDisplayName().toString());
-		return tag;
+		compound.setInteger("EnergyStored", this.energy);
+		return compound;
 	}
 
 	@Override
@@ -58,6 +97,8 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 		this.handler.deserializeNBT(compound.getCompoundTag("Inventory"));
 		this.cookTime = compound.getInteger("CookTime");
 		this.energy = compound.getInteger("GuiEnergy");
+		if (compound.hasKey("EnergyStored"))
+			this.energy = compound.getInteger("EnergyStored");
 		if (compound.hasKey("Name"))
 			this.customName = compound.getString("Name");
 	}
@@ -85,11 +126,16 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 
 	@Override
 	public int receiveEnergy(int receive, boolean sumulate) {
-		// int amount = (receive >= this.energy) ? receive : this.energy;
+		// int amount = (receive <= this.energy) ? receive : this.energy;
 		// this.energy += amount;
 		// if (this.energy < 0)
 		// this.energy = 0;
-		return this.energy += receive;
+		int amount = this.energy += receive;
+		if (this.energy > storage) {
+			this.energy = storage;
+		}
+		return amount;
+		// return this.energy += receive;
 		// return ModSettings.blockProperties.inputRate;
 	}
 

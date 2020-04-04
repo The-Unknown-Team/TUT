@@ -55,7 +55,7 @@ public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
 					return EnumFacing.NORTH;
 				}
 			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.SOUTH) || ((new Object() {
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.EAST) || ((new Object() {
 			public EnumFacing getEnumFacing(BlockPos pos) {
 				try {
 					IBlockState _bs = world.getBlockState(pos);
@@ -68,7 +68,7 @@ public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
 					return EnumFacing.NORTH;
 				}
 			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.NORTH))) {
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.WEST))) {
 			if ((((new Object() {
 				public ItemStack getItemStack(BlockPos pos, int sltid) {
 					TileEntity inv = world.getTileEntity(pos);
@@ -197,7 +197,7 @@ public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
 					return EnumFacing.NORTH;
 				}
 			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.WEST) || ((new Object() {
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.SOUTH) || ((new Object() {
 			public EnumFacing getEnumFacing(BlockPos pos) {
 				try {
 					IBlockState _bs = world.getBlockState(pos);
@@ -210,7 +210,7 @@ public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
 					return EnumFacing.NORTH;
 				}
 			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.EAST))) {
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.NORTH))) {
 			if ((((new Object() {
 				public ItemStack getItemStack(BlockPos pos, int sltid) {
 					TileEntity inv = world.getTileEntity(pos);
@@ -339,7 +339,7 @@ public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
 					return EnumFacing.NORTH;
 				}
 			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.SOUTH) || ((new Object() {
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.EAST) || ((new Object() {
 			public EnumFacing getEnumFacing(BlockPos pos) {
 				try {
 					IBlockState _bs = world.getBlockState(pos);
@@ -352,7 +352,7 @@ public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
 					return EnumFacing.NORTH;
 				}
 			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.NORTH))) {
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.WEST))) {
 			if (((world.isAirBlock(new BlockPos((int) x, (int) y, (int) (z - 1))))
 					|| (world.isAirBlock(new BlockPos((int) x, (int) y, (int) (z + 1)))))) {
 				world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1))).getBlock().dropBlockAsItem(world,
@@ -379,7 +379,7 @@ public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
 					return EnumFacing.NORTH;
 				}
 			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.WEST) || ((new Object() {
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.SOUTH) || ((new Object() {
 			public EnumFacing getEnumFacing(BlockPos pos) {
 				try {
 					IBlockState _bs = world.getBlockState(pos);
@@ -392,7 +392,7 @@ public class ProcedureAlloySmelterUpdateTick extends ElementsTUT.ModElement {
 					return EnumFacing.NORTH;
 				}
 			}
-		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.EAST))) {
+		}.getEnumFacing(new BlockPos((int) x, (int) y, (int) z))) == EnumFacing.NORTH))) {
 			if (((world.isAirBlock(new BlockPos((int) (x - 1), (int) y, (int) z)))
 					|| (world.isAirBlock(new BlockPos((int) (x + 1), (int) y, (int) z))))) {
 				world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)).getBlock().dropBlockAsItem(world,
