@@ -812,6 +812,38 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "InvarPickaxe",
+      "type": "tool",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "InvarAxe",
+      "type": "tool",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "InvarShovel",
+      "type": "tool",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "InvarHoe",
+      "type": "tool",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -824,13 +856,15 @@
   ],
   "language_map": {
     "en_us": {
-      "item.nickelingot.name": "Nickel Ingot",
-      "item.voltmeter.name": "Voltmeter",
       "item.copperingot.name": "Copper Ingot",
+      "item.voltmeter.name": "Voltmeter",
+      "item.nickelingot.name": "Nickel Ingot",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
       "item.goldwire.name": "Gold Wire",
+      "item.invaraxe.name": "Invar Axe",
+      "item.invarhoe.name": "Invar Hoe",
       "tooltip.solar_panel.normal": "Solar panel generates %1$ RF",
       "item.bronzeingot.name": "Bronze Ingot",
       "item.tiningot.name": "Tin Ingot",
@@ -845,10 +879,12 @@
       "item.processingcircuit.name": "Processing Circuit",
       "tile.uraninitecable.name": "Uraninite Cable",
       "tile.oildrilltest.name": "Oildrilltest",
+      "item.invarshovel.name": "Invar Shovel",
       "item.deadlands.name": "Dread Flint And Copper",
       "item.bronzeaxe.name": "Bronze Axe",
       "item.bronzehoe.name": "Bronze Hoe",
       "fluid.oil": "Oil",
+      "item.invarpickaxe.name": "Invar Pickaxe",
       "tile.solderingtable.name": "Soldering Table",
       "tile.deadlog.name": "Dead Wood",
       "item.bronzepickaxe.name": "Bronze Pickaxe",
