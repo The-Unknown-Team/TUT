@@ -38,6 +38,7 @@ tile.uranium238ore.name=Uranium 238 Ore
 item.invarsword.name=Invar Sword
 item.logiccircuit.name=Logic Circuit
 tile.alloyhopper.name=Alloy Hopper
+item.invaringot.name=Invar Ingot
 item.unpreppedpcb.name=Un-Etched PCB
 itemGroup.tabtut=TUT
 item.uraninitedust.name=Uraninite Dust

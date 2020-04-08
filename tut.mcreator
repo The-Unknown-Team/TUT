@@ -486,7 +486,7 @@
       "name": "CommonProxy",
       "type": "procedure",
       "sortid": 41,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -497,7 +497,7 @@
       "name": "Extendspreinit",
       "type": "procedure",
       "sortid": 42,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -508,7 +508,7 @@
       "name": "Something",
       "type": "procedure",
       "sortid": 43,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -844,6 +844,70 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "InvarIngot",
+      "type": "item",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Test",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Worldupdatetick",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -856,9 +920,9 @@
   ],
   "language_map": {
     "en_us": {
-      "item.copperingot.name": "Copper Ingot",
-      "item.voltmeter.name": "Voltmeter",
       "item.nickelingot.name": "Nickel Ingot",
+      "item.voltmeter.name": "Voltmeter",
+      "item.copperingot.name": "Copper Ingot",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
@@ -896,6 +960,7 @@
       "item.invarsword.name": "Invar Sword",
       "item.logiccircuit.name": "Logic Circuit",
       "tile.alloyhopper.name": "Alloy Hopper",
+      "item.invaringot.name": "Invar Ingot",
       "item.unpreppedpcb.name": "Un-Etched PCB",
       "itemGroup.tabtut": "TUT",
       "item.uraninitedust.name": "Uraninite Dust"
@@ -924,5 +989,5 @@
     "modElementsPackage": "net.theunknown.tut",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000213616
+  "mcreatorVersion": 202000214217
 }

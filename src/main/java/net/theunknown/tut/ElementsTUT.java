@@ -6,7 +6,6 @@
  */
 package net.theunknown.tut;
 
-import net.theunknown.tut.utils.GuiHandler;
 import net.theunknown.tut.gui.GuiSolderingGui;
 
 import net.minecraftforge.fml.relauncher.Side;
