@@ -486,7 +486,7 @@
       "name": "CommonProxy",
       "type": "procedure",
       "sortid": 41,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -497,7 +497,7 @@
       "name": "Extendspreinit",
       "type": "procedure",
       "sortid": 42,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -508,7 +508,7 @@
       "name": "Something",
       "type": "procedure",
       "sortid": 43,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -924,5 +924,5 @@
     "modElementsPackage": "net.theunknown.tut",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000213616
+  "mcreatorVersion": 202000214217
 }
