@@ -856,9 +856,9 @@
   ],
   "language_map": {
     "en_us": {
-      "item.copperingot.name": "Copper Ingot",
-      "item.voltmeter.name": "Voltmeter",
       "item.nickelingot.name": "Nickel Ingot",
+      "item.voltmeter.name": "Voltmeter",
+      "item.copperingot.name": "Copper Ingot",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
