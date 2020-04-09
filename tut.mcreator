@@ -844,6 +844,22 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "MaincommandCommandExecuted",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -856,9 +872,9 @@
   ],
   "language_map": {
     "en_us": {
-      "item.nickelingot.name": "Nickel Ingot",
-      "item.voltmeter.name": "Voltmeter",
       "item.copperingot.name": "Copper Ingot",
+      "item.voltmeter.name": "Voltmeter",
+      "item.nickelingot.name": "Nickel Ingot",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",

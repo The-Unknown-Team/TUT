@@ -18,6 +18,7 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 	int tick;
 	public int energy = 0;
 	public int storage = ModSettings.furnaceProperties.Furnacecapacity;
+	public int forevery = ModSettings.furnaceProperties.foreach;
 	public ItemStackHandler handler = new ItemStackHandler(3);
 	private String customName;
 	public int cookTime;
@@ -33,9 +34,10 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 		if (world.isBlockPowered(pos))
 			energy += 100;
 		ItemStack[] inputs = new ItemStack[]{handler.getStackInSlot(0), handler.getStackInSlot(1)};
-		if (energy >= 20) {
+		if (energy >= forevery) {
 			if (cookTime > 0) {
 				cookTime++;
+				energy -= forevery;
 				if (cookTime == 100) {
 					if (handler.getStackInSlot(2).getCount() > 0) {
 						handler.getStackInSlot(2).grow(1);

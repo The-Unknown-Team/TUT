@@ -4,11 +4,8 @@ import net.minecraftforge.common.config.Config;
 
 @Config(modid = TUT.MODID)
 public class ModSettings {
-
 	public static final SolarProperties solarProperties = new SolarProperties();
 	public static final FurnaceProperties furnaceProperties = new FurnaceProperties();
-
-	
 	public static class SolarProperties {
 		@Config.Comment({"How much RF/T the solar panel produces. [default: 2]"})
 		public int RFpertick = 2;
@@ -16,7 +13,6 @@ public class ModSettings {
 		public int EnergyCapacity = 40000;
 		@Config.Comment({"How much RF it can outout to other blocks per tick. [default: 40]"})
 		public int transferRate = 40;
-		
 	}
 
 	public static class FurnaceProperties {
@@ -24,6 +20,7 @@ public class ModSettings {
 		public int Furnacecapacity = 40000;
 		@Config.Comment({"How much RF the Energy Furnace can take in. [default:500]"})
 		public int inputRate = 500;
-
+		@Config.Comment({"How much rf it takes for each tick in smelting [default: 69]"})
+		public int foreach = 69;
 	}
 }

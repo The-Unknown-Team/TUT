@@ -1,6 +1,9 @@
 package net.theunknown.tut.blocks.recipes;
 
+import net.theunknown.tut.item.ItemBronzeIngot;
+
 import net.minecraft.item.ItemStack;
+import net.minecraft.init.Items;
 
 import java.util.Map.Entry;
 import java.util.Map;
@@ -19,6 +22,8 @@ public class FurnaceRecipes {
 
 	private FurnaceRecipes() {
 		// nothing-here-to-see-:)
+		
+		addEletricRecipe(new ItemStack(Items.IRON_INGOT), new ItemStack(Items.COAL), new ItemStack(ItemBronzeIngot.block), 0.0F);
 	}
 
 	public void addEletricRecipe(ItemStack input1, ItemStack input2, ItemStack result, float experience) {
@@ -33,7 +38,7 @@ public class FurnaceRecipes {
 			if (this.compareItemStacks(input1, (ItemStack) entry.getKey())) {
 				for (Entry<ItemStack, ItemStack> ent : entry.getValue().entrySet()) {
 					if (this.compareItemStacks(input2, (ItemStack) ent.getKey())) {
-						return (ItemStack) ent.getValue();
+						return ((ItemStack) ent.getValue()).copy();
 					}
 				}
 			}

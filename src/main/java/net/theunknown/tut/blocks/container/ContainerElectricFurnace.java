@@ -5,10 +5,10 @@ import net.theunknown.tut.blocks.recipes.FurnaceRecipes;
 
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.CapabilityItemHandler;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.Slot;
+import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Container;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,7 +18,7 @@ public class ContainerElectricFurnace extends Container {
 	private int cookTime, energy;
 	public ContainerElectricFurnace(InventoryPlayer player, TileEntitiyEletricFurnace tileentitiy) {
 		this.tileentity = tileentitiy;
-		IItemHandler handler = tileentitiy.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
+		IItemHandler handler = tileentitiy.handler;
 		this.addSlotToContainer(new SlotItemHandler(handler, 0, 44, 21));
 		this.addSlotToContainer(new SlotItemHandler(handler, 1, 44, 50));
 		this.addSlotToContainer(new SlotItemHandler(handler, 2, 97, 36));
@@ -42,16 +42,20 @@ public class ContainerElectricFurnace extends Container {
 		this.tileentity.setField(id, data);
 	}
 
-	/*
-	 * @Override public void detectAndSendChanges() { super.detectAndSendChanges();
-	 * for (int i = 0; i < this.listeners.size(); ++i) { IContainerListener listener
-	 * = (IContainerListener) this.listeners.get(i); if (this.cookTime !=
-	 * this.tileentity.getField(0)) listener.sendWindowProperty(this, 0,
-	 * this.tileentity.getField(0)); if (this.energy != this.tileentity.getField(1))
-	 * listener.sendWindowProperty(this, 1, this.tileentity.getField(1)); }
-	 * this.cookTime = this.tileentity.getField(0); this.energy =
-	 * this.tileentity.getField(1); }
-	 */
+	@Override
+	public void detectAndSendChanges() {
+		super.detectAndSendChanges();
+		for (int i = 0; i < this.listeners.size(); ++i) {
+			IContainerListener listener = (IContainerListener) this.listeners.get(i);
+			if (this.cookTime != this.tileentity.getField(0))
+				listener.sendWindowProperty(this, 0, this.tileentity.getField(0));
+			if (this.energy != this.tileentity.getField(1))
+				listener.sendWindowProperty(this, 1, this.tileentity.getField(1));
+		}
+		this.cookTime = this.tileentity.getField(0);
+		this.energy = this.tileentity.getField(1);
+	}
+
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
 		ItemStack stack = ItemStack.EMPTY;
