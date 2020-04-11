@@ -4,6 +4,7 @@ import net.theunknown.tut.item.ItemBronzeIngot;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.init.Items;
+import net.minecraft.init.Blocks;
 
 import java.util.Map.Entry;
 import java.util.Map;
@@ -22,8 +23,9 @@ public class FurnaceRecipes {
 
 	private FurnaceRecipes() {
 		// nothing-here-to-see-:)
-		
 		addEletricRecipe(new ItemStack(Items.IRON_INGOT), new ItemStack(Items.COAL), new ItemStack(ItemBronzeIngot.block), 0.0F);
+		addEletricRecipe(new ItemStack(Items.DIAMOND), new ItemStack(Items.GOLD_INGOT), new ItemStack(ItemBronzeIngot.block), 0.0F);
+		//addEletricRecipe(new ItemStack(), new ItemStack(Blocks.IRON_ORE), new ItemStack(Items.IRON_INGOT), 0.0F);
 	}
 
 	public void addEletricRecipe(ItemStack input1, ItemStack input2, ItemStack result, float experience) {
@@ -50,7 +52,7 @@ public class FurnaceRecipes {
 		return stack2.getItem() == stack1.getItem() && (stack2.getMetadata() == 32767 || stack2.getMetadata() == stack1.getMetadata());
 	}
 
-	public float getSinteringExperience(ItemStack stack) {
+	public float getEletrickExperience(ItemStack stack) {
 		for (Entry<ItemStack, Float> entry : this.experienceList.entrySet()) {
 			if (this.compareItemStacks(stack, (ItemStack) entry.getKey())) {
 				return ((Float) entry.getValue()).floatValue();

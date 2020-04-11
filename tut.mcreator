@@ -1,6 +1,6 @@
 {
   "id_map": {
-    "GUI": 2
+    "GUI": 3
   },
   "mod_elements": [
     {
@@ -486,7 +486,7 @@
       "name": "CommonProxy",
       "type": "procedure",
       "sortid": 41,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -497,7 +497,7 @@
       "name": "Extendspreinit",
       "type": "procedure",
       "sortid": 42,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -508,7 +508,7 @@
       "name": "Something",
       "type": "procedure",
       "sortid": 43,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -860,6 +860,16 @@
           }
         ]
       }
+    },
+    {
+      "name": "Te",
+      "type": "gui",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {
+        "0": 3
+      }
     }
   ],
   "variable_elements": [],
@@ -940,5 +950,5 @@
     "modElementsPackage": "net.theunknown.tut",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000213616
+  "mcreatorVersion": 202000214217
 }

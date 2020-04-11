@@ -1,9 +1,12 @@
 package net.theunknown.tut.tile;
 
-import net.theunknown.tut.blocks.recipes.FurnaceRecipes;
+import net.theunknown.tut.blocks.recipes.CrusherRecipes;
+import net.theunknown.tut.blocks.FluidTank;
 import net.theunknown.tut.ModSettings;
 
 import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.energy.IEnergyStorage;
 
 import net.minecraft.util.text.TextComponentTranslation;
@@ -14,15 +17,20 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.EntityPlayer;
 
-public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, IEnergyStorage {
+import javax.annotation.Nonnull;
+
+public class TileEntityElectricCrusher extends TileEntity implements ITickable, IEnergyStorage, IFluidHandler {
 	int tick;
 	public int energy = 0;
 	public int storage = ModSettings.furnaceProperties.Furnacecapacity;
 	public int forevery = ModSettings.furnaceProperties.foreach;
-	public ItemStackHandler handler = new ItemStackHandler(3);
+	public ItemStackHandler handler = new ItemStackHandler(2);
 	private String customName;
 	public int cookTime;
 	private ItemStack smelting = ItemStack.EMPTY;
+	public FluidTank tank = new FluidTank(4000);
+	private boolean needsUpdate = false;
+	private int updateTimer = 0;
 	@Override
 	public void update() {
 		tick++;
@@ -33,39 +41,34 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 		}
 		if (world.isBlockPowered(pos))
 			energy += 100;
-		ItemStack[] inputs = new ItemStack[]{handler.getStackInSlot(0), handler.getStackInSlot(1)};
+		ItemStack[] inputs = new ItemStack[]{handler.getStackInSlot(0)};
 		if (energy >= forevery) {
 			if (cookTime > 0) {
 				cookTime++;
 				energy -= forevery;
 				if (cookTime == 100) {
-					if (handler.getStackInSlot(2).getCount() > 0) {
-						handler.getStackInSlot(2).grow(1);
+					if (handler.getStackInSlot(1).getCount() > 0) {
+						handler.getStackInSlot(1).grow(1);
 					} else {
-						handler.insertItem(2, smelting, false);
+						handler.insertItem(1, smelting, false);
 					}
 					smelting = ItemStack.EMPTY;
 					cookTime = 0;
 					return;
 				}
 			} else {
-				if (!inputs[0].isEmpty() && !inputs[1].isEmpty()) {
-					ItemStack output = FurnaceRecipes.getInstance().getEletricResult(inputs[0], inputs[1]);
+				if (!inputs[0].isEmpty()) {
+					ItemStack output = CrusherRecipes.getInstance().getEletricResult(inputs[0]);
 					if (!output.isEmpty()) {
 						smelting = output;
 						cookTime++;
 						inputs[0].shrink(1);
-						inputs[1].shrink(1);
 						handler.setStackInSlot(0, inputs[0]);
-						handler.setStackInSlot(1, inputs[1]);
-					} /*else if (output == smelting) {
-						smelting = output;
-						cookTime++;
-						inputs[0].shrink(1);
-						inputs[1].shrink(1);
-						handler.setStackInSlot(0, inputs[0]);
-						handler.setStackInSlot(1, inputs[1]);
-					}*/
+					} /*
+						 * else if (output == smelting) { smelting = output; cookTime++;
+						 * inputs[0].shrink(1); inputs[1].shrink(1); handler.setStackInSlot(0,
+						 * inputs[0]); handler.setStackInSlot(1, inputs[1]); }
+						 */
 				}
 			}
 		}
@@ -153,7 +156,7 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 
 	@Override
 	public ITextComponent getDisplayName() {
-		return new TextComponentTranslation("container.electric_furnace");
+		return new TextComponentTranslation("container.electric_crusher");
 	}
 
 	public boolean isUsableByPlayer(EntityPlayer player) {
@@ -181,5 +184,15 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 			case 1 :
 				this.energy = value;
 		}
+	}
+
+	//////////////// FLUID PART/////////////////////
+	@Override
+	public int fill(FluidStack resource, FluidAction action) {
+	}
+
+	@Nonnull
+	@Override
+	public FluidStack drain(int maxDrain, FluidAction action) {
 	}
 }
