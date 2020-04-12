@@ -893,9 +893,9 @@
   ],
   "language_map": {
     "en_us": {
-      "item.copperingot.name": "Copper Ingot",
-      "item.voltmeter.name": "Voltmeter",
       "item.nickelingot.name": "Nickel Ingot",
+      "item.voltmeter.name": "Voltmeter",
+      "item.copperingot.name": "Copper Ingot",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
@@ -930,6 +930,7 @@
       "item.basiccircuit.name": "Basic Circuit",
       "tile.uranium235ore.name": "Uranium 235 Ore",
       "tile.uranium238ore.name": "Uranium 238 Ore",
+      "entity.augmentedcreeper.name": "Augmented Creeper",
       "item.invarsword.name": "Invar Sword",
       "item.logiccircuit.name": "Logic Circuit",
       "tile.alloyhopper.name": "Alloy Hopper",
@@ -961,5 +962,5 @@
     "modElementsPackage": "net.theunknown.tut",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000213616
+  "mcreatorVersion": 202000214217
 }

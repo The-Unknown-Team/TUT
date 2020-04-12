@@ -40,7 +40,9 @@ public class CrusherRecipes {
 	public ItemStack getEletricResult(ItemStack input1) {
 		for (Entry<ItemStack, Map<ItemStack, ItemStack>> entry : this.smeltingList.columnMap().entrySet()) {
 			for (Entry<ItemStack, ItemStack> ent : entry.getValue().entrySet()) {
-				return ((ItemStack) ent.getValue()).copy();
+				//if (this.compareItemStacks(input1, (ItemStack) entry.getKey())) {
+					return ((ItemStack) ent.getValue()).copy();
+				//}
 			}
 		}
 		return ItemStack.EMPTY;
