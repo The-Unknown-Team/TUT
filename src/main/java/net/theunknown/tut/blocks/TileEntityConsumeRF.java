@@ -3,9 +3,9 @@ package net.theunknown.tut.blocks;
 import net.minecraftforge.fml.common.Optional;
 
 import net.minecraft.util.EnumFacing;
+import net.minecraft.tileentity.TileEntity;
 
 import cofh.redstoneflux.api.IEnergyReceiver;
-import net.minecraft.tileentity.TileEntity;
 
 @Optional.Interface(iface = "cofh.redstoneflux.api.IEnergyReceiver", modid = "redstoneflux", striprefs = true)
 public class TileEntityConsumeRF extends TileEntity implements IEnergyReceiver {

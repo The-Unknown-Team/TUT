@@ -1,8 +1,11 @@
 package net.theunknown.tut.utils;
 
+import net.theunknown.tut.tile.TileEntityElectricCrusher;
 import net.theunknown.tut.tile.TileEntitiyEletricFurnace;
 import net.theunknown.tut.blocks.guis.GuiElectricFurnace;
+import net.theunknown.tut.blocks.guis.GuiElectricCrusher;
 import net.theunknown.tut.blocks.container.ContainerElectricFurnace;
+import net.theunknown.tut.blocks.container.ContainerElectricCrusher;
 import net.theunknown.tut.Ids;
 
 import net.minecraftforge.fml.common.network.IGuiHandler;
@@ -16,6 +19,8 @@ public class GuiHandler implements IGuiHandler {
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		if (ID == Ids.GUI_ELECTRIC_FURNACE)
 			return new ContainerElectricFurnace(player.inventory, (TileEntitiyEletricFurnace) world.getTileEntity(new BlockPos(x, y, z)));
+		if (ID == Ids.GUI_ELECTRIC_CRUSHER)
+			return new ContainerElectricCrusher(player.inventory, (TileEntityElectricCrusher) world.getTileEntity(new BlockPos(x, y, z)));
 		return null;
 	}
 
@@ -23,6 +28,8 @@ public class GuiHandler implements IGuiHandler {
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		if (ID == Ids.GUI_ELECTRIC_FURNACE)
 			return new GuiElectricFurnace(player.inventory, (TileEntitiyEletricFurnace) world.getTileEntity(new BlockPos(x, y, z)));
+		if (ID == Ids.GUI_ELECTRIC_CRUSHER)
+			return new GuiElectricCrusher(player.inventory, (TileEntityElectricCrusher) world.getTileEntity(new BlockPos(x, y, z)));
 		return null;
 	}
 }

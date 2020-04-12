@@ -7,6 +7,7 @@
 package net.theunknown.tut;
 
 import net.theunknown.tut.utils.GuiHandler;
+import net.theunknown.tut.gui.GuiTe;
 import net.theunknown.tut.gui.GuiSolderingGui;
 
 import net.minecraftforge.fml.relauncher.Side;
@@ -128,6 +129,8 @@ public class ElementsTUT implements IFuelHandler, IWorldGenerator {
 		public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
 			if (id == GuiSolderingGui.GUIID)
 				return new GuiSolderingGui.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiTe.GUIID)
+				return new GuiTe.GuiContainerMod(world, x, y, z, player);
 			return null;
 		}
 
@@ -135,6 +138,8 @@ public class ElementsTUT implements IFuelHandler, IWorldGenerator {
 		public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
 			if (id == GuiSolderingGui.GUIID)
 				return new GuiSolderingGui.GuiWindow(world, x, y, z, player);
+			if (id == GuiTe.GUIID)
+				return new GuiTe.GuiWindow(world, x, y, z, player);
 			return null;
 		}
 	}

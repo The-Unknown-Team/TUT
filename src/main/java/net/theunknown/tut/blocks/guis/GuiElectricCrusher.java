@@ -1,7 +1,7 @@
 package net.theunknown.tut.blocks.guis;
 
-import net.theunknown.tut.tile.TileEntitiyEletricFurnace;
-import net.theunknown.tut.blocks.container.ContainerElectricFurnace;
+import net.theunknown.tut.tile.TileEntityElectricCrusher;
+import net.theunknown.tut.blocks.container.ContainerElectricCrusher;
 import net.theunknown.tut.TUT;
 
 import net.minecraft.util.ResourceLocation;
@@ -9,12 +9,12 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.gui.inventory.GuiContainer;
 
-public class GuiElectricFurnace extends GuiContainer {
-	private static final ResourceLocation TEXTURES = new ResourceLocation(TUT.MODID + ":textures/gui/electric_furnace.png");
+public class GuiElectricCrusher extends GuiContainer {
+	private static final ResourceLocation TEXTURES = new ResourceLocation(TUT.MODID + ":textures/gui/electric_crusher.png");
 	private final InventoryPlayer player;
-	private final TileEntitiyEletricFurnace tileentity;
-	public GuiElectricFurnace(InventoryPlayer player, TileEntitiyEletricFurnace tileentity) {
-		super(new ContainerElectricFurnace(player, tileentity));
+	private final TileEntityElectricCrusher tileentity;
+	public GuiElectricCrusher(InventoryPlayer player, TileEntityElectricCrusher tileentity) {
+		super(new ContainerElectricCrusher(player, tileentity));
 		this.player = player;
 		this.tileentity = tileentity;
 	}

@@ -21,6 +21,7 @@ public class RFBlock extends BlockBase implements ITileEntityProvider {
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		// return new TileEntityPower();
+		// return new Testetile();
 		return new TileEntityConsumeRF();
 		// return new TileEntitiyEletricFurnace(); Was for testing
 	}
