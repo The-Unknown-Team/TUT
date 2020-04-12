@@ -1,5 +1,6 @@
 {
   "id_map": {
+    "ENTITY": 2,
     "GUI": 2
   },
   "mod_elements": [
@@ -486,7 +487,7 @@
       "name": "CommonProxy",
       "type": "procedure",
       "sortid": 41,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -497,7 +498,7 @@
       "name": "Extendspreinit",
       "type": "procedure",
       "sortid": 42,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -508,7 +509,7 @@
       "name": "Something",
       "type": "procedure",
       "sortid": 43,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "ids": {},
       "metadata": {
@@ -844,6 +845,17 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "AugmentedCreeper",
+      "type": "mob",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 1,
+        "1": 2
+      }
     }
   ],
   "variable_elements": [],
@@ -893,6 +905,7 @@
       "item.basiccircuit.name": "Basic Circuit",
       "tile.uranium235ore.name": "Uranium 235 Ore",
       "tile.uranium238ore.name": "Uranium 238 Ore",
+      "entity.augmentedcreeper.name": "Augmented Creeper",
       "item.invarsword.name": "Invar Sword",
       "item.logiccircuit.name": "Logic Circuit",
       "tile.alloyhopper.name": "Alloy Hopper",

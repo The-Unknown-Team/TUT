@@ -35,6 +35,7 @@ tile.dreadgravel.name=Dread Gravel
 item.basiccircuit.name=Basic Circuit
 tile.uranium235ore.name=Uranium 235 Ore
 tile.uranium238ore.name=Uranium 238 Ore
+entity.augmentedcreeper.name=Augmented Creeper
 item.invarsword.name=Invar Sword
 item.logiccircuit.name=Logic Circuit
 tile.alloyhopper.name=Alloy Hopper
