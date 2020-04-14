@@ -1,6 +1,7 @@
-item.nickelingot.name=Nickel Ingot
-item.voltmeter.name=Voltmeter
 item.copperingot.name=Copper Ingot
+item.voltmeter.name=Voltmeter
+item.nickelingot.name=Nickel Ingot
+item.crushedironore.name=Dirty Crushed Iron Ore
 tile.deadgrass.name=Dead Grass
 item.etchedpcb.name=Etched PCB
 tile.alloysmelter.name=Alloy Smelter
@@ -20,6 +21,7 @@ item.bronzesword.name=Bronze Sword
 item.bronzeshovel.name=Bronze Shovel
 item.processingcircuit.name=Processing Circuit
 tile.uraninitecable.name=Uraninite Cable
+item.steelingot.name=Steel Ingot
 tile.oildrilltest.name=Oildrilltest
 item.invarshovel.name=Invar Shovel
 item.deadlands.name=Dread Flint And Copper

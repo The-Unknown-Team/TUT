@@ -1,7 +1,6 @@
 package net.theunknown.tut.blocks.container;
 
 import net.theunknown.tut.tile.TileEntitiyEletricFurnace;
-import net.theunknown.tut.blocks.recipes.FurnaceRecipes;
 
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.IItemHandler;
@@ -58,39 +57,38 @@ public class ContainerElectricFurnace extends Container {
 
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
-		ItemStack stack = ItemStack.EMPTY;
+		ItemStack itemstack = ItemStack.EMPTY;
 		Slot slot = (Slot) this.inventorySlots.get(index);
 		if (slot != null && slot.getHasStack()) {
-			ItemStack stack1 = slot.getStack();
-			stack = stack1.copy();
-			if (index == 2) {
-				if (!this.mergeItemStack(stack1, 4, 39, true))
+			ItemStack itemstack1 = slot.getStack();
+			itemstack = itemstack1.copy();
+			if (index < 3) {
+				if (!this.mergeItemStack(itemstack1, 3, this.inventorySlots.size(), true)) {
 					return ItemStack.EMPTY;
-				slot.onSlotChange(stack1, stack);
-			} else if (index != 2 && index != 1 && index != 0) {
-				Slot slot1 = (Slot) this.inventorySlots.get(index + 1);
-				if (!FurnaceRecipes.getInstance().getEletricResult(stack1, slot1.getStack()).isEmpty()) {
-					if (!this.mergeItemStack(stack1, 0, 2, false)) {
+				}
+				slot.onSlotChange(itemstack1, itemstack);
+			} else if (!this.mergeItemStack(itemstack1, 0, 3, false)) {
+				if (index < 3 + 27) {
+					if (!this.mergeItemStack(itemstack1, 3 + 27, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
-					} else if (index >= 4 && index < 31) {
-						if (!this.mergeItemStack(stack1, 31, 39, false))
-							return ItemStack.EMPTY;
-					} else if (index >= 31 && index < 39 && !this.mergeItemStack(stack1, 4, 31, false)) {
+					}
+				} else {
+					if (!this.mergeItemStack(itemstack1, 3, 3 + 27, false)) {
 						return ItemStack.EMPTY;
 					}
 				}
-			} else if (!this.mergeItemStack(stack1, 4, 39, false)) {
 				return ItemStack.EMPTY;
 			}
-			if (stack1.isEmpty()) {
+			if (itemstack1.getCount() == 0) {
 				slot.putStack(ItemStack.EMPTY);
 			} else {
 				slot.onSlotChanged();
 			}
-			if (stack1.getCount() == stack.getCount())
+			if (itemstack1.getCount() == itemstack.getCount()) {
 				return ItemStack.EMPTY;
-			slot.onTake(playerIn, stack1);
+			}
+			slot.onTake(playerIn, itemstack1);
 		}
-		return stack;
+		return itemstack;
 	}
 }

@@ -15,17 +15,29 @@
           },
           "id": 0,
           "name": "Slot #0",
-          "x": 302,
-          "y": 136
+          "x": 319,
+          "y": 117
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "name": "Slot #1",
+          "x": 320,
+          "y": 176
         }
       },
       {
         "type": "outputslot",
         "data": {
-          "id": 1,
-          "name": "Slot #1",
-          "x": 463,
-          "y": 140
+          "id": 2,
+          "name": "Slot #2",
+          "x": 441,
+          "y": 141
         }
       }
     ]

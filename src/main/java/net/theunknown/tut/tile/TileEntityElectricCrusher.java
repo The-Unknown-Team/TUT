@@ -6,6 +6,7 @@ import net.theunknown.tut.ModSettings;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fluids.FluidTank;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.common.capabilities.Capability;
@@ -22,75 +23,61 @@ import net.minecraft.entity.player.EntityPlayer;
 public class TileEntityElectricCrusher extends TileEntity implements ITickable, IEnergyStorage {
 	int tick;
 	public int energy = 0;
-	public int storage = ModSettings.furnaceProperties.Furnacecapacity;
-	public int forevery = ModSettings.furnaceProperties.foreach;
+	public int storage = ModSettings.crusherProperties.Crushercapacity;
+	public int forevery = ModSettings.crusherProperties.foreach;
+	public int lube = ModSettings.crusherProperties.lube;
 	public ItemStackHandler handler = new ItemStackHandler(2);
 	private String customName;
+	protected FluidStack fluid;
 	public int cookTime;
+	protected int capacity = 0;
 	private ItemStack smelting = ItemStack.EMPTY;
 	protected FluidTank tank = new FluidTank(3000);
 	private boolean needsUpdate = false;
+	public int dontbother;
 	private int updateTimer = 0;
+	protected boolean canFill = true;
 	@Override
 	public void update() {
 		tick++;
 		if (tick > 20)
 			tick = 0;
 		if (tick == 0) {
-			// System.out.println(Integer.toString(energy));
+			// System.out.println("Fluid is: " + tank.getFluid());
+			// System.out.println("The amount is: " + tank.getFluidAmount());
 		}
-		if (world.isBlockPowered(pos))
-			energy += 100;
 		ItemStack[] inputs = new ItemStack[]{handler.getStackInSlot(0)};
 		if (energy >= forevery) {
-			if (cookTime > 0) {
-				cookTime++;
-				energy -= forevery;
-				if (cookTime == 100) {
-					if (handler.getStackInSlot(1).getCount() > 0) {
-						handler.getStackInSlot(1).grow(1);
-					} else {
-						handler.insertItem(1, smelting, false);
+			if (tank.getFluidAmount() > lube) {
+				if (cookTime > 0) {
+					cookTime++;
+					energy -= forevery;
+					if (cookTime == 100) {
+						if (handler.getStackInSlot(1).getCount() > 0) {
+							handler.getStackInSlot(1).grow(1);
+						} else {
+							handler.insertItem(1, smelting, false);
+						}
+						smelting = ItemStack.EMPTY;
+						cookTime = 0;
+						return;
 					}
-					smelting = ItemStack.EMPTY;
-					cookTime = 0;
-					return;
-				}
-			} else {
-				if (!inputs[0].isEmpty()) {
-					ItemStack output = CrusherRecipes.getInstance().getEletricResult(inputs[0]);
-					if (!output.isEmpty()) {
-						if (output == inputs[0]) {
+				} else {
+					if (!inputs[0].isEmpty()) {
+						ItemStack output = CrusherRecipes.getInstance().getEletricResult(inputs[0]);
+						if (!output.isEmpty()) {
 							smelting = output;
+							tank.drain(lube, true);
 							cookTime++;
 							inputs[0].shrink(1);
 							handler.setStackInSlot(0, inputs[0]);
 						}
-					} /*
-						 * else if (output == smelting) { smelting = output; cookTime++;
-						 * inputs[0].shrink(1); inputs[1].shrink(1); handler.setStackInSlot(0,
-						 * inputs[0]); handler.setStackInSlot(1, inputs[1]); }
-						 */
+					}
 				}
 			}
 		}
 	}
 
-	/*
-	 * @Override public boolean
-	 * hasCapability(net.minecraftforge.common.capabilities.Capability<?>
-	 * capability, net.minecraft.util.EnumFacing facing) { if (capability != null &&
-	 * capability.getName() == "net.minecraftforge.energy.IEnergyStorage") { return
-	 * true; } return super.hasCapability(capability, facing); }
-	 * 
-	 * @SuppressWarnings("unchecked")
-	 * 
-	 * @Override public <T> T
-	 * getCapability(net.minecraftforge.common.capabilities.Capability<T>
-	 * capability, net.minecraft.util.EnumFacing facing) { if (capability != null &&
-	 * capability.getName() == "net.minecraftforge.energy.IEnergyStorage") { return
-	 * (T) this; } return super.getCapability(capability, facing); }
-	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
@@ -207,4 +194,8 @@ public class TileEntityElectricCrusher extends TileEntity implements ITickable, 
 		}
 	}
 	//////////////// FLUID PART/////////////////////
+	/*
+	 * public boolean apply(FluidTank tank, IItemHandler inventory, boolean consume)
+	 * { }
+	 */
 }

@@ -1,7 +1,8 @@
 package net.theunknown.tut.blocks.recipes;
 
+import net.theunknown.tut.item.ItemCrushedIronORe;
+
 import net.minecraft.item.ItemStack;
-import net.minecraft.init.Items;
 import net.minecraft.init.Blocks;
 
 import java.util.Map.Entry;
@@ -27,29 +28,28 @@ public class CrusherRecipes {
 		// ItemStack(Items.GOLD_INGOT), new ItemStack(ItemBronzeIngot.block), 0.0F);
 		// addEletricRecipe(new ItemStack(), new ItemStack(Blocks.IRON_ORE), new
 		// ItemStack(Items.IRON_INGOT), 0.0F);
-		addEletricRecipe(new ItemStack(Blocks.IRON_ORE), new ItemStack(Items.IRON_INGOT), 0.0F);
+		addEletricRecipe(new ItemStack(Blocks.IRON_ORE), new ItemStack(ItemCrushedIronORe.block), 0.0F);
+		addEletricRecipe(new ItemStack(Blocks.GOLD_ORE), new ItemStack(Blocks.IRON_ORE), 0.0F);
 	}
 
 	public void addEletricRecipe(ItemStack input1, ItemStack result, float experience) {
 		if (getEletricResult(input1) != ItemStack.EMPTY)
 			return;
-		this.smeltingList.put(input1, input1, result);
+		this.smeltingList.put(input1, result, result);
 		this.experienceList.put(result, Float.valueOf(experience));
 	}
 
 	public ItemStack getEletricResult(ItemStack input1) {
 		for (Entry<ItemStack, Map<ItemStack, ItemStack>> entry : this.smeltingList.columnMap().entrySet()) {
 			for (Entry<ItemStack, ItemStack> ent : entry.getValue().entrySet()) {
-				//if (this.compareItemStacks(input1, (ItemStack) entry.getKey())) {
-					return ((ItemStack) ent.getValue()).copy();
-				//}
+				return ((ItemStack) ent.getValue()).copy();
 			}
 		}
 		return ItemStack.EMPTY;
 	}
 
 	private boolean compareItemStacks(ItemStack stack1) {
-		return (stack1.getMetadata() == 32767);
+		return stack1.getItem() == stack1.getItem() && (stack1.getMetadata() == 32767);
 	}
 
 	public float getEletrickExperience(ItemStack stack) {

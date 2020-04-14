@@ -58,13 +58,15 @@ public class GuiTe extends ElementsTUT.ModElement {
 			this.x = x;
 			this.y = y;
 			this.z = z;
-			this.internal = new InventoryBasic("", true, 2);
+			this.internal = new InventoryBasic("", true, 3);
 			TileEntity ent = world.getTileEntity(new BlockPos(x, y, z));
 			if (ent instanceof IInventory)
 				this.internal = (IInventory) ent;
-			this.customSlots.put(0, this.addSlotToContainer(new Slot(internal, 0, 27, 32) {
+			this.customSlots.put(0, this.addSlotToContainer(new Slot(internal, 0, 35, 23) {
 			}));
-			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 107, 34) {
+			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 36, 52) {
+			}));
+			this.customSlots.put(2, this.addSlotToContainer(new Slot(internal, 2, 96, 35) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -95,18 +97,18 @@ public class GuiTe extends ElementsTUT.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 2) {
-					if (!this.mergeItemStack(itemstack1, 2, this.inventorySlots.size(), true)) {
+				if (index < 3) {
+					if (!this.mergeItemStack(itemstack1, 3, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 2, false)) {
-					if (index < 2 + 27) {
-						if (!this.mergeItemStack(itemstack1, 2 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 3, false)) {
+					if (index < 3 + 27) {
+						if (!this.mergeItemStack(itemstack1, 3 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 2, 2 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 3, 3 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}

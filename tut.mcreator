@@ -861,7 +861,7 @@
       "type": "gui",
       "sortid": 69,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {
         "0": 3
       }
@@ -881,6 +881,22 @@
           }
         ]
       }
+    },
+    {
+      "name": "SteelIngot",
+      "type": "item",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CrushedIronORe",
+      "type": "item",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -893,9 +909,10 @@
   ],
   "language_map": {
     "en_us": {
-      "item.nickelingot.name": "Nickel Ingot",
-      "item.voltmeter.name": "Voltmeter",
       "item.copperingot.name": "Copper Ingot",
+      "item.voltmeter.name": "Voltmeter",
+      "item.nickelingot.name": "Nickel Ingot",
+      "item.crushedironore.name": "Dirty Crushed Iron Ore",
       "tile.deadgrass.name": "Dead Grass",
       "item.etchedpcb.name": "Etched PCB",
       "tile.alloysmelter.name": "Alloy Smelter",
@@ -915,6 +932,7 @@
       "item.bronzeshovel.name": "Bronze Shovel",
       "item.processingcircuit.name": "Processing Circuit",
       "tile.uraninitecable.name": "Uraninite Cable",
+      "item.steelingot.name": "Steel Ingot",
       "tile.oildrilltest.name": "Oildrilltest",
       "item.invarshovel.name": "Invar Shovel",
       "item.deadlands.name": "Dread Flint And Copper",

@@ -1,10 +1,9 @@
 package net.theunknown.tut.blocks.recipes;
 
-import net.theunknown.tut.item.ItemBronzeIngot;
+import net.theunknown.tut.item.ItemSteelIngot;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.init.Items;
-import net.minecraft.init.Blocks;
 
 import java.util.Map.Entry;
 import java.util.Map;
@@ -23,9 +22,10 @@ public class FurnaceRecipes {
 
 	private FurnaceRecipes() {
 		// nothing-here-to-see-:)
-		addEletricRecipe(new ItemStack(Items.IRON_INGOT), new ItemStack(Items.COAL), new ItemStack(ItemBronzeIngot.block), 0.0F);
-		addEletricRecipe(new ItemStack(Items.DIAMOND), new ItemStack(Items.GOLD_INGOT), new ItemStack(ItemBronzeIngot.block), 0.0F);
-		//addEletricRecipe(new ItemStack(), new ItemStack(Blocks.IRON_ORE), new ItemStack(Items.IRON_INGOT), 0.0F);
+		addEletricRecipe(new ItemStack(Items.COAL), new ItemStack(Items.IRON_INGOT), new ItemStack(ItemSteelIngot.block), 0.0F);
+		addEletricRecipe(new ItemStack(Items.IRON_INGOT), new ItemStack(Items.COAL), new ItemStack(ItemSteelIngot.block), 0.0F);
+		// addEletricRecipe(new ItemStack(), new ItemStack(Blocks.IRON_ORE), new
+		// ItemStack(Items.IRON_INGOT), 0.0F);
 	}
 
 	public void addEletricRecipe(ItemStack input1, ItemStack input2, ItemStack result, float experience) {

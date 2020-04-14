@@ -22,6 +22,7 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 	public ItemStackHandler handler = new ItemStackHandler(3);
 	private String customName;
 	public int cookTime;
+	public int dontbother;
 	private ItemStack smelting = ItemStack.EMPTY;
 	@Override
 	public void update() {
@@ -31,8 +32,6 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 		if (tick == 0) {
 			// System.out.println(Integer.toString(energy));
 		}
-		if (world.isBlockPowered(pos))
-			energy += 100;
 		ItemStack[] inputs = new ItemStack[]{handler.getStackInSlot(0), handler.getStackInSlot(1)};
 		if (energy >= forevery) {
 			if (cookTime > 0) {
@@ -52,20 +51,15 @@ public class TileEntitiyEletricFurnace extends TileEntity implements ITickable, 
 				if (!inputs[0].isEmpty() && !inputs[1].isEmpty()) {
 					ItemStack output = FurnaceRecipes.getInstance().getEletricResult(inputs[0], inputs[1]);
 					if (!output.isEmpty()) {
-						smelting = output;
-						cookTime++;
-						inputs[0].shrink(1);
-						inputs[1].shrink(1);
-						handler.setStackInSlot(0, inputs[0]);
-						handler.setStackInSlot(1, inputs[1]);
-					} /*else if (output == smelting) {
-						smelting = output;
-						cookTime++;
-						inputs[0].shrink(1);
-						inputs[1].shrink(1);
-						handler.setStackInSlot(0, inputs[0]);
-						handler.setStackInSlot(1, inputs[1]);
-					}*/
+						if (handler.getStackInSlot(2).getCount() + output.getCount() <= output.getMaxStackSize()) {
+							smelting = output;
+							cookTime++;
+							inputs[0].shrink(1);
+							inputs[1].shrink(1);
+							handler.setStackInSlot(0, inputs[0]);
+							handler.setStackInSlot(1, inputs[1]);
+						}
+					}
 				}
 			}
 		}
